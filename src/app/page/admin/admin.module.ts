@@ -8,6 +8,10 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     BrowserModule,
     CommonModule
+  ],
+  exports: [
+    CountryPageComponent
   ]
+
 })
 export class AdminModule { }
