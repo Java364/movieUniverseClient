@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { CastComponent } from './components/cast/cast.component';
-import { CountryComponent } from './components/country/country.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { StarComponent } from './components/star/star.component';
 import { MoviemarkComponent } from './components/moviemark/moviemark.component';
@@ -51,13 +50,13 @@ import { TrailerViewComponent } from './components/trailer/trailer-view/trailer-
 import { TrailerEditComponent } from './components/trailer/trailer-edit/trailer-edit.component';
 import { UserViewComponent } from './components/user/user-view/user-view.component';
 import { UserEditComponent } from './components/user/user-edit/user-edit.component';
+import { CustomComponentModule } from './components/components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AvatarComponent,
     CastComponent,
-    CountryComponent,
     MovieComponent,
     StarComponent,
     MoviemarkComponent,
@@ -106,7 +105,8 @@ import { UserEditComponent } from './components/user/user-edit/user-edit.compone
     UserEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CustomComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
