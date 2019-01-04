@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+
 import { PageModule } from './page/page.module';
+import { AdminModule } from './page/admin/admin.module';
 
 
 
@@ -22,6 +24,7 @@ import { PageModule } from './page/page.module';
   bootstrap: [AppComponent]
   })
   export class AppModule { }
+
 
 
 

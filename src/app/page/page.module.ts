@@ -7,6 +7,9 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     CommonModule,
     AdminModule
+  ],
+  exports:[
+    AdminModule
   ]
 })
 export class PageModule { }
