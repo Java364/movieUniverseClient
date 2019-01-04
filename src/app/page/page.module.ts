@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AdminModule } from './admin/admin.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {AdminModule} from './admin/admin.module';
+import {PageComponent} from './page.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [PageComponent
+  ],
   imports: [
     CommonModule,
     AdminModule
   ],
   exports:[
-    AdminModule
+    PageComponent
   ]
 })
 export class PageModule { }
