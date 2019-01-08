@@ -1,25 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AdminModule } from './admin/admin.module';
-import {CountryPageComponent} from './admin/country/country-page/country-page.component';
-import {RouterModule, Routes} from '@angular/router';
-
-const appRoutes: Routes = [
-  {path: 'country', component: CountryPageComponent}
-];
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {AdminModule} from './admin/admin.module';
+import {PageComponent} from './page.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [PageComponent
+  ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      {enableTracing: true}
-    ),
     CommonModule,
     AdminModule
   ],
   exports: [
-    AdminModule
+    PageComponent
   ]
 })
 export class PageModule { }
