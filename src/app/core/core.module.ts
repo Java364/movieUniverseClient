@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HttpService } from './http.service';
+import { HttpService } from './http.service';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HttpService
+  ],
   imports: [
     CommonModule
   ]
