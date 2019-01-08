@@ -3,18 +3,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 import { StarModule } from './star/star.module';
-import { MainComponent } from './main/main.component';
+import { MainModule } from './main/main.module';
 
 @NgModule({
     exports: [
-        StarModule
+        StarModule,
+        MainModule
     ],
     imports: [
         HttpClientModule,
         CommonModule,
-        StarModule
+        StarModule,
+        MainModule
     ],
-    declarations: [MainComponent]
+    declarations: []
 })
 
 export class ComponentsModule {

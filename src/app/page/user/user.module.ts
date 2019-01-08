@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './main/main-page/main-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent }
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
       { enableTracing: true }
     ),
     BrowserModule,
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ],
   exports: [
     MainPageComponent,
