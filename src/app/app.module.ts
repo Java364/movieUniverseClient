@@ -1,15 +1,12 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {FormsModule} from '@angular/forms';
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
-<<<<<<< HEAD
-=======
-import {PageModule} from './page/page.module';
+import { PageModule } from './page/page.module';
 
 
->>>>>>> 697b390f88246beeb9f8986168e45fe52bb9a10d
 @NgModule({
   declarations: [
     AppComponent
@@ -21,8 +18,8 @@ import {PageModule} from './page/page.module';
   ],
   providers: [],
   bootstrap: [AppComponent]
-  })
-  export class AppModule { }
+})
+export class AppModule { }
 
 
 
