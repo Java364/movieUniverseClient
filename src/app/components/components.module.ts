@@ -6,13 +6,15 @@ import { StarModule } from './star/star.module';
 import { CountryModule } from './country/country.module';
 import { MainModule } from './main/main.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { LinkModule } from './link/link.module';
 
 @NgModule({
     exports: [
         StarModule,
         MainModule,
         NavbarModule,
-        CountryModule
+        CountryModule,
+        LinkModule
     ],
     imports: [
         HttpClientModule,
@@ -20,7 +22,8 @@ import { NavbarModule } from './navbar/navbar.module';
         StarModule,
         MainModule,
         NavbarModule,
-        CountryModule
+        CountryModule,
+        LinkModule
     ],
     declarations: []
 })
