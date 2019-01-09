@@ -18,7 +18,7 @@ import { CountryModule } from './country/country.module';
         StarModule,
         CountryModule
     ],
-    declarations: [MainComponent, CountrySelectorComponent]
+    declarations: [MainComponent]
 })
 
 export class ComponentsModule {
