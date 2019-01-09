@@ -5,13 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+import { MoviePageComponent } from './movie-page/movie-page.component';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent }
 ];
 
 @NgModule({
-  declarations: [MainPageComponent],
+  declarations: [MainPageComponent, MoviePageComponent],
   imports: [
     RouterModule.forRoot(
       appRoutes,
