@@ -1,3 +1,6 @@
-<p>
-  star-editor works!
-</p>
+<div *ngFor="let star of stars">
+  <label>{{star.id}}</label>.
+  <label>{{star.firstName}}</label>
+  <label>{{star.lastName}}</label>
+</div>
+<app-country-selector></app-country-selector>

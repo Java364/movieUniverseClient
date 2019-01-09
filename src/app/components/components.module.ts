@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 import { StarModule } from './star/star.module';
+import { CountryModule } from './country/country.module';
 import { MainModule } from './main/main.module';
 import { NavbarModule } from './navbar/navbar.module';
 
@@ -10,14 +11,16 @@ import { NavbarModule } from './navbar/navbar.module';
     exports: [
         StarModule,
         MainModule,
-        NavbarModule
+        NavbarModule,
+        CountryModule
     ],
     imports: [
         HttpClientModule,
         CommonModule,
         StarModule,
         MainModule,
-        NavbarModule
+        NavbarModule,
+        CountryModule
     ],
     declarations: []
 })

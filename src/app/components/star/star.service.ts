@@ -6,11 +6,11 @@ export class StarService {
   constructor(private httpClient: HttpClient) {
   }
 
-//public getAll(callback: Function) {
-//    this.httpClient.get('http://localhost:8080/star/list').subscribe(
-//      (success) => {
-//        callback(success);
-//      }
- //   );
-//  }
+public getAll(callback: Function) {
+    this.httpClient.get('http://localhost:8080/stars/list').subscribe(
+      (success) => {
+        callback(success);
+      }
+    );
+  }
 }

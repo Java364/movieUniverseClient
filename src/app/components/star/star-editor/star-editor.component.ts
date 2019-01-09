@@ -17,11 +17,12 @@ export class StarEditorComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.showAllStars();
   }
 
-  //showAllStars = () => {
-  //  this.starService.getAll((success) => {
-  //    this.stars = <Star[]>success;
-  //  });
- // }
+  showAllStars = () => {
+    this.starService.getAll((success) => {
+      this.stars = <Star[]>success;
+    });
+  }
 }
