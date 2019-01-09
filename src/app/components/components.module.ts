@@ -9,6 +9,7 @@ import { NavbarModule } from './navbar/navbar.module';
 import { LinkModule } from './link/link.module';
 import { GalleryEditorComponent } from './gallery/gallery-editor/gallery-editor.component';
 import { GalleryModule } from './gallery/gallery.module';
+import { AvatarModule } from './avatar/avatar.module';
 
 @NgModule({
     exports: [
@@ -17,7 +18,8 @@ import { GalleryModule } from './gallery/gallery.module';
         NavbarModule,
         CountryModule,
         LinkModule,
-        GalleryModule
+        GalleryModule,
+        AvatarModule
     ],
     imports: [
         HttpClientModule,
@@ -27,7 +29,8 @@ import { GalleryModule } from './gallery/gallery.module';
         NavbarModule,
         CountryModule,
         LinkModule,
-        GalleryModule
+        GalleryModule,
+        AvatarModule
     ],
     declarations: []
 })
