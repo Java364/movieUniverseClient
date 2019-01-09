@@ -3,19 +3,21 @@ import { CountrySelectorComponent } from './country-selector/country-selector.co
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CountryService } from './country.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-    declarations:[
+    declarations: [
         CountrySelectorComponent
     ],
-    imports:[
+    imports: [
         HttpClientModule,
-        CommonModule
+        CommonModule,
+        FormsModule
     ],
-    exports:[
+    exports: [
         CountrySelectorComponent
     ],
-    providers:[
+    providers: [
         CountryService
     ]
 })

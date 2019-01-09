@@ -15,19 +15,17 @@ export class CountrySelectorComponent implements OnInit {
 
   public getSelectedCountries() {
     return this.selectedCountries;
-}
-
-public setSelectedCountries(countries: number[]) {
-    this.selectedCountries = countries;
-}
-public getSelectedCountriesDto() {
-  return this.countries.filter(country => this.selectedCountries.indexOf(country.id) > 0);
-}
-
-ngOnInit() {
-  this.countryService.getAll((success) => {
+  }
+  ngOnInit() {
+    this.countryService.getAll((success) => {
       console.log(success);
       this.countries = <Country[]>success;
-  });
-}
+    });
+  }
+  public setSelectedCountries(countries: number[]) {
+    this.selectedCountries = countries;
+  }
+  public getSelectedCountriesDto() {
+    return this.countries.filter(country => this.selectedCountries.indexOf(country.id) > 0);
+  }
 }

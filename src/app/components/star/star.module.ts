@@ -5,17 +5,17 @@ import { CommonModule } from '@angular/common';
 import { StarService } from './star.service';
 
 @NgModule({
-    declarations:[
+    declarations: [
         StarEditorComponent
     ],
-    imports:[
+    imports: [
         HttpClientModule,
         CommonModule
     ],
-    exports:[
+    exports: [
         StarEditorComponent
     ],
-    providers:[
+    providers: [
         StarService
     ]
 })
