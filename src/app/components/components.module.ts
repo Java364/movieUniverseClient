@@ -4,17 +4,21 @@ import { CommonModule } from '@angular/common';
 
 import { StarModule } from './star/star.module';
 import { MainComponent } from './main/main.component';
+import { CountrySelectorComponent } from './country/country-selector/country-selector.component';
+import { CountryModule } from './country/country.module';
 
 @NgModule({
     exports: [
-        StarModule
+        StarModule,
+        CountryModule
     ],
     imports: [
         HttpClientModule,
         CommonModule,
-        StarModule
+        StarModule,
+        CountryModule
     ],
-    declarations: [MainComponent]
+    declarations: [MainComponent, CountrySelectorComponent]
 })
 
 export class ComponentsModule {
