@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { StarService } from './star.service';
 import { LinkModule } from '../link/link.module';
+import { GalleryModule } from '../gallery/gallery.module';
 
 @NgModule({
     declarations: [
@@ -12,7 +13,8 @@ import { LinkModule } from '../link/link.module';
     imports: [
         HttpClientModule,
         CommonModule,
-        LinkModule
+        LinkModule,
+        GalleryModule
     ],
     exports: [
         StarEditorComponent

@@ -7,6 +7,8 @@ import { CountryModule } from './country/country.module';
 import { MainModule } from './main/main.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { LinkModule } from './link/link.module';
+import { GalleryEditorComponent } from './gallery/gallery-editor/gallery-editor.component';
+import { GalleryModule } from './gallery/gallery.module';
 
 @NgModule({
     exports: [
@@ -14,7 +16,8 @@ import { LinkModule } from './link/link.module';
         MainModule,
         NavbarModule,
         CountryModule,
-        LinkModule
+        LinkModule,
+        GalleryModule
     ],
     imports: [
         HttpClientModule,
@@ -23,7 +26,8 @@ import { LinkModule } from './link/link.module';
         MainModule,
         NavbarModule,
         CountryModule,
-        LinkModule
+        LinkModule,
+        GalleryModule
     ],
     declarations: []
 })
