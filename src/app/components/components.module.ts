@@ -7,6 +7,8 @@ import { CountryModule } from './country/country.module';
 import { MainModule } from './main/main.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { LinkModule } from './link/link.module';
+import {SignUpModule} from "./navbar/signup/signup.module";
+
 
 @NgModule({
     exports: [
@@ -14,7 +16,9 @@ import { LinkModule } from './link/link.module';
         MainModule,
         NavbarModule,
         CountryModule,
-        LinkModule
+        LinkModule,
+        SignUpModule
+
     ],
     imports: [
         HttpClientModule,
@@ -23,7 +27,8 @@ import { LinkModule } from './link/link.module';
         MainModule,
         NavbarModule,
         CountryModule,
-        LinkModule
+        LinkModule,
+        SignUpModule
     ],
     declarations: []
 })

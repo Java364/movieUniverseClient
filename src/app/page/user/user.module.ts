@@ -5,13 +5,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+import {SignupPageComponent} from "./signup-page/signup-page.component";
 
 const appRoutes: Routes = [
-  { path: 'main', component: MainPageComponent }
+  { path: 'main', component: MainPageComponent },
+  { path: 'signup', component: SignupPageComponent }
 ];
 
 @NgModule({
-  declarations: [MainPageComponent],
+  declarations: [MainPageComponent, SignupPageComponent],
   imports: [
     RouterModule.forRoot(
       appRoutes,
