@@ -6,18 +6,18 @@ import { CountryService } from './country.service';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-    declarations:[
+    declarations: [
         CountrySelectorComponent
     ],
-    imports:[
+    imports: [
         HttpClientModule,
         CommonModule,
         FormsModule
     ],
-    exports:[
+    exports: [
         CountrySelectorComponent
     ],
-    providers:[
+    providers: [
         CountryService
     ]
 })

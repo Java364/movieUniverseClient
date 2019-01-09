@@ -18,8 +18,8 @@ export class CountrySelectorComponent implements OnInit {
   }
   ngOnInit() {
     this.countryService.getAll((success) => {
-        console.log(success);
-        this.countries = <Country[]>success;
+      console.log(success);
+      this.countries = <Country[]>success;
     });
   }
   public setSelectedCountries(countries: number[]) {
