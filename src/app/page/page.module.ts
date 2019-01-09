@@ -12,7 +12,8 @@ import { ComponentsModule } from '../components/components.module';
   imports: [
     CommonModule,
     AdminModule,
-    UserModule
+    UserModule,
+    NavbarModule
   ],
   exports: [
     PageComponent
