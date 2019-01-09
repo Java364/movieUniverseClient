@@ -4,6 +4,7 @@ import { MainPageComponent } from './main/main-page/main-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent }
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   ],
   exports: [
     MainPageComponent,
+    NavbarComponent,
     RouterModule
   ]
 })
