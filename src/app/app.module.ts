@@ -14,8 +14,10 @@ import { PageModule } from './page/page.module';
   imports: [
     BrowserModule,
     FormsModule,
-    PageModule
+    PageModule,
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

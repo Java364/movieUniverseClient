@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AdminModule } from './admin/admin.module';
 import { PageComponent } from './page.component';
 import { UserModule } from './user/user.module';
+import { NavbarModule } from '../components/navbar/navbar.module';
 
 @NgModule({
   declarations: [PageComponent
@@ -10,7 +11,8 @@ import { UserModule } from './user/user.module';
   imports: [
     CommonModule,
     AdminModule,
-    UserModule
+    UserModule,
+    NavbarModule
   ],
   exports: [
     PageComponent

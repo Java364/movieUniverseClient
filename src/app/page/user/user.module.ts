@@ -4,13 +4,20 @@ import { MainPageComponent } from './main/main-page/main-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+import {SignupPageComponent} from "./signup-page/signup-page.component";
+import { MoviePageComponent } from './movie-page/movie-page.component';
+
 
 const appRoutes: Routes = [
-  { path: 'main', component: MainPageComponent }
+  { path: 'main', component: MainPageComponent },
+  { path: 'signup', component: SignupPageComponent }
 ];
 
 @NgModule({
-  declarations: [MainPageComponent],
+
+  declarations: [MainPageComponent, SignupPageComponent,MoviePageComponent],
+
   imports: [
     RouterModule.forRoot(
       appRoutes,
@@ -22,6 +29,7 @@ const appRoutes: Routes = [
   ],
   exports: [
     MainPageComponent,
+    NavbarComponent,
     RouterModule
   ]
 })

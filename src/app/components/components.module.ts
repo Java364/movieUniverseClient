@@ -12,6 +12,8 @@ import { GalleryModule } from './gallery/gallery.module';
 import { AvatarModule } from './avatar/avatar.module';
 import { ProfessionEditComponent } from './profession/profession-edit/profession-edit.component';
 import { ProfessionModule } from './profession/profession.module';
+import {SignUpModule} from "./navbar/signup/signup.module";
+
 
 @NgModule({
     exports: [
@@ -22,7 +24,9 @@ import { ProfessionModule } from './profession/profession.module';
         LinkModule,
         GalleryModule,
         AvatarModule,
-        ProfessionModule
+        ProfessionModule,
+        SignUpModule
+
     ],
     imports: [
         HttpClientModule,
@@ -34,7 +38,8 @@ import { ProfessionModule } from './profession/profession.module';
         LinkModule,
         GalleryModule,
         AvatarModule,
-        ProfessionModule
+        ProfessionModule,
+        SignUpModule
     ],
     declarations: []
 })
