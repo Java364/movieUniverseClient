@@ -1,50 +1,66 @@
-<!--
-<div class="row p-3">
-</div>
-      <form>
-          <div class="form-group row">
-            <label class="col-sm-4 col-form-label" for="name">Email:</label>
-            <div class="col-sm-8">
-              <input type="email" [(ngModel)]="user.email" name="email" class="form-control" />
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-4 col-form-label" for="name">Password:</label>
-            <div class="col-sm-8">
-              <input type="password" [(ngModel)]="user.password" name="password" class="form-control" />
-            </div>
-          </div>
 
-          <div class="form-group row">
-            <label class="col-sm-4 col-form-label" for="name">First name:</label>
-            <div class="col-sm-8">
-              <input type="text" [(ngModel)]="user.firstName" name="firstName" class="form-control" />
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-4 col-form-label" for="name">Last name:</label>
-            <div class="col-sm-8">
-              <input type="text" [(ngModel)]="user.lastName" name="lastName" class="form-control" />
-            </div>
-          </div>
-        </form>
+<div class="NewUserForm">
+  <div class="title">Registration form</div>
+  <form [formGroup]="userForm"  (ngSubmit)="signupGeneral(userForm)">
+    <div class="form-group">
 
-        <button type="button" class="btn btn-outline-success ml-auto" (click)="registrate()" data-dismiss="modal">sign up</button>
+        <input matInput placeholder="Firstname" formControlName="firstName" required>
+        <mat-error *ngIf="firstnameControl.hasError('maxlength') ">
+          String is too long
+        </mat-error>
+        <mat-error *ngIf="firstnameControl.hasError('required')">
+          Firstname is <strong>required</strong>
+        </mat-error>
+
+      <div class="form-group">
+
+          <input  matInput placeholder="Lastname" formControlName="lastName" required>
+          <mat-error *ngIf="lastnameControl.hasError('maxlength') ">
+            String is too long
+          </mat-error>
+          <mat-error *ngIf="lastnameControl.hasError('required')">
+            Lastname is <strong>required</strong>
+          </mat-error>
+
+      </div>
+      <div class="form-group">
+
+          <input matInput placeholder="Enter your email" formControlName="email" [formControl]="email" required>
+          <mat-error *ngIf="emailControl.hasError('email') ">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+      </div>
+
+      <div class="form-group">
+
+          <input matInput placeholder="Password" formControlName="password" >
 
 
+          <mat-error *ngIf="passwordControl.hasError('minlength') && !passwordControl.hasError('required')">
+            Password must contain more than 6 characters
+          </mat-error>
+          <mat-error *ngIf="passwordControl.hasError('maxlength') && !passwordControl.hasError('required')">
+            Password must contain less than 16 characters
+          </mat-error>
+          <mat-error *ngIf="passwordControl.hasError('required')">
+            Password is <strong>required</strong>
+          </mat-error>
 
--->
-<div class="wrapper">
-  <form #f="ngForm" class="form-signup">
-    <h2 class="form-signup-heading">Please sign up</h2>
-    <input type="text" class="form-control" id="username" ngModel name="firstName"
-           placeholder="First Name" required="" autofocus=""/>
-    <input type="text" class="form-control" id="sername" ngModel name="lastName"
-           placeholder="Last Name" required="" autofocus=""/>
-    <input type="text" class="form-control" id="email" ngModel name="email"
-           placeholder="Email" required="" autofocus=""/>
-    <input type="password" class="form-control" id="password" ngModel name="password" placeholder="Password"
-           required=""/>
-    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="signupGeneral(f)">Sign up</button>
+      </div>
+
+
+    <div class="form-group">
+      <button mat-button class="button">Register</button>
+    </div>
+    </div>
   </form>
+  <div class="form-group" *ngIf="_isSent">
+    <div class="col-12 text-center">
+      <h4 style="color:black"><strong>Check your email and confirm registration</strong></h4>
+      <h5 style="color:black">If you did not get email. Fill and send confirmation form one more time</h5>
+    </div>
+  </div>
 </div>
