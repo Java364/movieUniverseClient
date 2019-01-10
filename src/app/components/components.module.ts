@@ -10,6 +10,8 @@ import { LinkModule } from './link/link.module';
 import { GalleryEditorComponent } from './gallery/gallery-editor/gallery-editor.component';
 import { GalleryModule } from './gallery/gallery.module';
 import { AvatarModule } from './avatar/avatar.module';
+import { ProfessionEditComponent } from './profession/profession-edit/profession-edit.component';
+import { ProfessionModule } from './profession/profession.module';
 
 @NgModule({
     exports: [
@@ -19,7 +21,8 @@ import { AvatarModule } from './avatar/avatar.module';
         CountryModule,
         LinkModule,
         GalleryModule,
-        AvatarModule
+        AvatarModule,
+        ProfessionModule
     ],
     imports: [
         HttpClientModule,
@@ -30,7 +33,8 @@ import { AvatarModule } from './avatar/avatar.module';
         CountryModule,
         LinkModule,
         GalleryModule,
-        AvatarModule
+        AvatarModule,
+        ProfessionModule
     ],
     declarations: []
 })
