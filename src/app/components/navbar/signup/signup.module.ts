@@ -6,7 +6,7 @@ import {FormsModule} from "@angular/forms";
 import {SignupService} from "./signup.service";
 @NgModule({
   declarations: [
-SignupComponent
+    SignupComponent
   ],
   imports: [
     HttpClientModule,
@@ -17,7 +17,7 @@ SignupComponent
     SignupComponent
   ],
   providers: [
-SignupService
+    SignupService
   ]
 })
 

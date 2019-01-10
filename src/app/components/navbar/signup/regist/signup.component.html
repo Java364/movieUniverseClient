@@ -1,3 +1,4 @@
+<!--
 <div class="row p-3">
 </div>
       <form>
@@ -32,3 +33,18 @@
 
 
 
+-->
+<div class="wrapper">
+  <form #f="ngForm" class="form-signup">
+    <h2 class="form-signup-heading">Please sign up</h2>
+    <input type="text" class="form-control" id="username" ngModel name="firstName"
+           placeholder="First Name" required="" autofocus=""/>
+    <input type="text" class="form-control" id="sername" ngModel name="lastName"
+           placeholder="Last Name" required="" autofocus=""/>
+    <input type="text" class="form-control" id="email" ngModel name="email"
+           placeholder="Email" required="" autofocus=""/>
+    <input type="password" class="form-control" id="password" ngModel name="password" placeholder="Password"
+           required=""/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="signupGeneral(f)">Sign up</button>
+  </form>
+</div>
