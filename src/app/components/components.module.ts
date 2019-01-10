@@ -13,6 +13,11 @@ import { AvatarModule } from './avatar/avatar.module';
 import { ProfessionEditComponent } from './profession/profession-edit/profession-edit.component';
 import { ProfessionModule } from './profession/profession.module';
 import {SignUpModule} from "./navbar/signup/signup.module";
+import { MovieModule } from './movie/movie.module';
+import { PosterComponent } from './poster/poster.component';
+import { CastComponent } from './cast/cast.component';
+import { CrewComponent } from './crew/crew.component';
+import { TrailerComponent } from './trailer/trailer.component';
 
 
 @NgModule({
@@ -25,7 +30,9 @@ import {SignUpModule} from "./navbar/signup/signup.module";
         GalleryModule,
         AvatarModule,
         ProfessionModule,
-        SignUpModule
+        SignUpModule,
+        MovieModule
+
 
     ],
     imports: [
@@ -39,9 +46,10 @@ import {SignUpModule} from "./navbar/signup/signup.module";
         GalleryModule,
         AvatarModule,
         ProfessionModule,
-        SignUpModule
+        SignUpModule,
+        MovieModule
     ],
-    declarations: []
+    declarations: [PosterComponent, CastComponent, CrewComponent, TrailerComponent]
 })
 
 export class ComponentsModule {
