@@ -1,9 +1,4 @@
-<div *ngFor="let star of stars">
-  <label>{{star.id}}</label>.
-  <label>{{star.firstName}} </label>
-  <label>{{star.lastName}}</label>
-  <td> <button (click)="getStar(star.id)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
-</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="createNew()">Add new</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -45,14 +40,13 @@
           <input type="text" [(ngModel)]="star.cityOfBirth" name="cityOfBirth" class="form-control" />
         </div>
 
+        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="updateStar(star.id)" data-dismiss="modal">Update</button>
+        <button type="button" class="btn btn-primary" (click)="createStar()" data-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-
-<app-link-editor></app-link-editor>
-<app-gallery-editor></app-gallery-editor>

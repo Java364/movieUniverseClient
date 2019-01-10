@@ -4,18 +4,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { StarService } from './star.service';
 import { LinkModule } from '../link/link.module';
+import { GalleryModule } from '../gallery/gallery.module';
+import { StarCreatorComponent } from './star-creator/star-creator.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
-        StarEditorComponent
+        StarEditorComponent,
+        StarCreatorComponent
     ],
     imports: [
         HttpClientModule,
         CommonModule,
-        LinkModule
+        FormsModule,
+        LinkModule,
+        GalleryModule
     ],
     exports: [
-        StarEditorComponent
+        StarEditorComponent,
+        StarCreatorComponent
     ],
     providers: [
         StarService

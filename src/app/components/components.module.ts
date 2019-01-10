@@ -7,6 +7,11 @@ import { CountryModule } from './country/country.module';
 import { MainModule } from './main/main.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { LinkModule } from './link/link.module';
+import { GalleryEditorComponent } from './gallery/gallery-editor/gallery-editor.component';
+import { GalleryModule } from './gallery/gallery.module';
+import { AvatarModule } from './avatar/avatar.module';
+import { ProfessionEditComponent } from './profession/profession-edit/profession-edit.component';
+import { ProfessionModule } from './profession/profession.module';
 import {SignUpModule} from "./navbar/signup/signup.module";
 
 
@@ -17,6 +22,9 @@ import {SignUpModule} from "./navbar/signup/signup.module";
         NavbarModule,
         CountryModule,
         LinkModule,
+        GalleryModule,
+        AvatarModule,
+        ProfessionModule,
         SignUpModule
 
     ],
@@ -28,6 +36,9 @@ import {SignUpModule} from "./navbar/signup/signup.module";
         NavbarModule,
         CountryModule,
         LinkModule,
+        GalleryModule,
+        AvatarModule,
+        ProfessionModule,
         SignUpModule
     ],
     declarations: []
