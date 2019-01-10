@@ -18,7 +18,8 @@ import { CoreModule } from 'src/app/core/core.module';
         FormsModule,
         LinkModule,
         GalleryModule,
-        CoreModule
+        CoreModule,
+
     ],
     exports: [
         StarEditorComponent,

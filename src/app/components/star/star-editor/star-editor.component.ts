@@ -25,6 +25,7 @@ export class StarEditorComponent implements OnInit {
       this.stars = <Star[]>success;
     });
   }
+
   updateStar = (id: number) => {
     this.starService.updateStar(id, this.star, (success) => {
       this.star = <Star>success;
