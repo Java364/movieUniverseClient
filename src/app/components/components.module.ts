@@ -18,6 +18,10 @@ import { PosterComponent } from './poster/poster.component';
 import { CastComponent } from './cast/cast.component';
 import { CrewComponent } from './crew/crew.component';
 import { TrailerComponent } from './trailer/trailer.component';
+import { PosterModule } from './poster/poster.module';
+import { TrailerModule } from './trailer/trailer.module';
+import { CrewModule } from './crew/crew.module';
+import { CastModule } from './cast/cast.module';
 
 
 @NgModule({
@@ -31,8 +35,11 @@ import { TrailerComponent } from './trailer/trailer.component';
         AvatarModule,
         ProfessionModule,
         SignUpModule,
-        MovieModule
-
+        MovieModule,
+        PosterModule,
+        TrailerModule,
+        CrewModule,
+        CastModule
 
     ],
     imports: [
@@ -47,9 +54,13 @@ import { TrailerComponent } from './trailer/trailer.component';
         AvatarModule,
         ProfessionModule,
         SignUpModule,
-        MovieModule
+        MovieModule,
+        PosterModule,
+        TrailerModule,
+        CrewModule,
+        CastModule
     ],
-    declarations: [PosterComponent, CastComponent, CrewComponent, TrailerComponent]
+    declarations: []
 })
 
 export class ComponentsModule {
