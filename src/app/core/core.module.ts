@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpService } from './http.service';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
-    HttpService
+    
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+  ],
+  providers: [
+    HttpService,
+    AuthService
   ]
 })
 export class CoreModule { }
