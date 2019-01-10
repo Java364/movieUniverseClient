@@ -13,6 +13,7 @@ import { AvatarModule } from './avatar/avatar.module';
 import { ProfessionEditComponent } from './profession/profession-edit/profession-edit.component';
 import { ProfessionModule } from './profession/profession.module';
 import {SignUpModule} from "./navbar/signup/signup.module";
+import { CoreModule } from '../core/core.module';
 
 
 @NgModule({

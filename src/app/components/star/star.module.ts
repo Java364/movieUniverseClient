@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { StarEditorComponent } from './star-editor/star-editor.component';
-import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { StarService } from './star.service';
 import { LinkModule } from '../link/link.module';
 import { GalleryModule } from '../gallery/gallery.module';
 import { StarCreatorComponent } from './star-creator/star-creator.component';
 import { FormsModule } from '@angular/forms';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
     declarations: [
@@ -14,11 +14,11 @@ import { FormsModule } from '@angular/forms';
         StarCreatorComponent
     ],
     imports: [
-        HttpClientModule,
         CommonModule,
         FormsModule,
         LinkModule,
-        GalleryModule
+        GalleryModule,
+        CoreModule
     ],
     exports: [
         StarEditorComponent,
