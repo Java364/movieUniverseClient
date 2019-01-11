@@ -45,7 +45,13 @@
           <input type="text" [(ngModel)]="star.cityOfBirth" name="cityOfBirth" class="form-control" />
         </div>
 
-          <app-link-editor starMovieId = {{star.id}}></app-link-editor>
+        <app-link-of-star starId = {{star.id}}></app-link-of-star><br>
+
+        <app-link-editor starMovieId={{star.id}}></app-link-editor><br><br>
+
+        <app-countries-of-star starId = {{star.id}}></app-countries-of-star><br>
+
+        <app-country-selector></app-country-selector>
 
       </div>
       <div class="modal-footer">

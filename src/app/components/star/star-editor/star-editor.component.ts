@@ -3,6 +3,7 @@ import { StarService } from '../star.service';
 import { Star } from '../star';
 import { LinkEditorComponent } from '../../link/link-editor/link-editor.component';
 import { LinksService } from '../../link/link.service';
+import { CountrySelectorComponent } from '../../country/country-selector/country-selector.component';
 
 @Component({
   selector: 'app-star-editor',
@@ -16,6 +17,9 @@ export class StarEditorComponent implements OnInit {
 
   @ViewChild('linksEditor')
   private linksEditor: LinkEditorComponent;
+
+  @ViewChild('countrySelector')
+    private countrySelector: CountrySelectorComponent;
 
   constructor(private starService: StarService, private linksService: LinksService) {
     this.star = new Star();
@@ -57,4 +61,11 @@ export class StarEditorComponent implements OnInit {
       this.showAllStars();
     });
   }
+
+  addCountries = () => {
+    let countries = this.countrySelector.getSelectedCountriesDto();
+    this.starService.addCountries(this.star.id, countries, (success) => {
+        console.log(success)
+    })
+}
 }

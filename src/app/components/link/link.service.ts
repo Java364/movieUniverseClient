@@ -13,4 +13,12 @@ export class LinksService {
             }
         );
     }
+
+    public showStarsLinks(id: number, callback: Function) {
+        this.httpService.get<Links[]>('http://localhost:8080/stars/' + id + '/links').subscribe(
+            (success) => {
+                callback(success);
+            }
+        );
+    }
 }
