@@ -10,7 +10,6 @@ import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/
 })
 export class SignupComponent implements OnInit {
   public user: User;
-  errorMessage = '';
   userForm: FormGroup;
 
   constructor(private signupService: SignupService,
@@ -20,12 +19,12 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.createForm();
   }
-  createPost() {
-    this.signupService.registrate(this.user, (success) => {
-      this.user = <User>success;
-
-    });
-  }
+  // createPost() {
+  //   this.signupService.registrate(this.user, (success) => {
+  //     this.user = <User>success;
+  //
+  //   });
+  // }
 
   signupGeneral(userForm) {
     console.log('general sign in');
@@ -38,11 +37,10 @@ export class SignupComponent implements OnInit {
 
   }
   firstnameControl: FormControl = new FormControl('', [
-    Validators.required,
     Validators.maxLength(3)
   ]);
   lastnameControl: FormControl = new FormControl('', [
-    Validators.required,
+
     Validators.maxLength(3)
   ]);
   emailControl: FormControl = new FormControl('', [
@@ -64,4 +62,5 @@ export class SignupComponent implements OnInit {
 
     });
   }
+
 }

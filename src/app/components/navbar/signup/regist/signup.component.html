@@ -1,42 +1,33 @@
-
 <div class="NewUserForm">
   <div class="title">Registration form</div>
   <form [formGroup]="userForm"  (ngSubmit)="signupGeneral(userForm)">
     <div class="form-group">
-
         <input matInput placeholder="Firstname" formControlName="firstName" required>
         <mat-error *ngIf="firstnameControl.hasError('maxlength') ">
           String is too long
         </mat-error>
-        <mat-error *ngIf="firstnameControl.hasError('required')">
-          Firstname is <strong>required</strong>
-        </mat-error>
 
       <div class="form-group">
-
           <input  matInput placeholder="Lastname" formControlName="lastName" required>
           <mat-error *ngIf="lastnameControl.hasError('maxlength') ">
             String is too long
           </mat-error>
-          <mat-error *ngIf="lastnameControl.hasError('required')">
-            Lastname is <strong>required</strong>
-          </mat-error>
+
 
       </div>
       <div class="form-group">
-
-          <input matInput placeholder="Enter your email" formControlName="email" [formControl]="email" required>
-          <mat-error *ngIf="emailControl.hasError('email') ">
+          <input matInput placeholder="Enter your email" formControlName="email"  required>
+        <mat-error *ngIf="emailControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="emailControl.hasError('email') ">
             Please enter a valid email address
           </mat-error>
-          <mat-error *ngIf="emailControl.hasError('required')">
-            Email is <strong>required</strong>
-          </mat-error>
-      </div>
 
+      </div>
       <div class="form-group">
 
-          <input matInput placeholder="Password" formControlName="password" >
+          <input matInput placeholder="Password" formControlName="password" required >
 
 
           <mat-error *ngIf="passwordControl.hasError('minlength') && !passwordControl.hasError('required')">
@@ -50,8 +41,6 @@
           </mat-error>
 
       </div>
-
-
     <div class="form-group">
       <button mat-button class="button">Register</button>
     </div>
