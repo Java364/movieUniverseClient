@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {User} from "./user";
 import {Router} from "@angular/router";
 
@@ -19,7 +19,7 @@ export class SignupService {
   //     }
   //   );
   // }
-  signup(firstName: string,lastName: string, email: string, password: string): void {
+  /*signup(firstName: string,lastName: string, email: string, password: string): void {
 
     this.httpClient.post<any>(baseUrl + 'signup', {
       firstName: firstName,
@@ -30,8 +30,23 @@ export class SignupService {
     alert("all ok");
     this.router.navigate(['/login']);
 
-}
+}*/
+   signup(firstName: string,lastName: string, email: string, password: string) {
 
+
+    this.httpClient.post(baseUrl + 'signup', {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+    }, { responseType: 'text' }).subscribe(
+      (success) => {
+        console.log("ddss")
+
+        this.router.navigate(['/login']);
+      }
+    );
+  }
 
 
 
