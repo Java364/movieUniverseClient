@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from "../../signup/user";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {SignupService} from "../../signup/signup.service";
+import {LoginService} from "../login.service";
 
 @Component({
   selector: 'app-login',
@@ -6,10 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  public user: User;
+  userf: FormGroup;
 
-  constructor() { }
+  constructor(private loginService: LoginService,
+              private fb: FormBuilder) {
+    this.user = new User();
+  }
 
   ngOnInit() {
+  }
+
+
+  loginGeneral(userf) {
+    const email = userf.value.email;
+    const password = userf.value.password;
+    this.loginService.login(email, password);
+console.log("eweewew");
+
   }
 
 }

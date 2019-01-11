@@ -27,6 +27,12 @@ export class SignupService {
       email: email,
       password: password,
     }).subscribe();
-    this.router.navigate(['/']);
+    alert("all ok");
+    this.router.navigate(['/login']);
 
-}}
+}
+
+
+
+
+}
