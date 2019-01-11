@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
 import { CountryModule } from '../country/country.module';
 import { AvatarModule } from '../avatar/avatar.module';
+import { ProfessionModule } from '../profession/profession.module';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { AvatarModule } from '../avatar/avatar.module';
         GalleryModule,
         CoreModule,
         CountryModule,
-        AvatarModule
+        AvatarModule,
+        ProfessionModule
 
     ],
     exports: [
