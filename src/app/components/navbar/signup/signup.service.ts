@@ -30,4 +30,9 @@ export class SignupService {
     alert("all ok");
     this.router.navigate(['/login']);
 
-}}
+}
+
+
+
+
+}
