@@ -8,6 +8,7 @@ import { StarCreatorComponent } from './star-creator/star-creator.component';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
 import { CountryModule } from '../country/country.module';
+import { AvatarModule } from '../avatar/avatar.module';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { CountryModule } from '../country/country.module';
         LinkModule,
         GalleryModule,
         CoreModule,
-        CountryModule
+        CountryModule,
+        AvatarModule
 
     ],
     exports: [
