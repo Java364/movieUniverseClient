@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfessionEditComponent } from './profession-edit/profession-edit.component';
 import { ProfessionsOfStarComponent } from './professions-of-star/professions-of-star.component';
 import { ProfessionService } from './profession.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ProfessionService } from './profession.service';
   ],
   imports: [
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     ProfessionEditComponent,

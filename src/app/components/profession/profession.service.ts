@@ -16,4 +16,12 @@ export class ProfessionService {
       }
     );
   }
+
+  public createProfessionForStar(link: string, starProfession: Profession, callback: Function) {
+    this.httpService.post(link, starProfession).subscribe(
+      (success) => {
+        callback(success);
+      }
+    );
+  }
 }
