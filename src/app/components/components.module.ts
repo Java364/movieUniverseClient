@@ -7,13 +7,17 @@ import { CountryModule } from './country/country.module';
 import { MainModule } from './main/main.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { LinkModule } from './link/link.module';
-import { GalleryEditorComponent } from './gallery/gallery-editor/gallery-editor.component';
 import { GalleryModule } from './gallery/gallery.module';
 import { AvatarModule } from './avatar/avatar.module';
-import { ProfessionEditComponent } from './profession/profession-edit/profession-edit.component';
 import { ProfessionModule } from './profession/profession.module';
 import {SignUpModule} from "./navbar/signup/signup.module";
-import { CoreModule } from '../core/core.module';
+import { MovieModule } from './movie/movie.module';
+import { PosterModule } from './poster/poster.module';
+import { TrailerModule } from './trailer/trailer.module';
+import { CrewModule } from './crew/crew.module';
+import { CastModule } from './cast/cast.module';
+import {LoginModule} from "./navbar/login/login.module";
+
 
 
 @NgModule({
@@ -26,7 +30,13 @@ import { CoreModule } from '../core/core.module';
         GalleryModule,
         AvatarModule,
         ProfessionModule,
-        SignUpModule
+        SignUpModule,
+        MovieModule,
+        PosterModule,
+        TrailerModule,
+        CrewModule,
+        CastModule,
+        LoginModule
 
     ],
     imports: [
@@ -40,7 +50,13 @@ import { CoreModule } from '../core/core.module';
         GalleryModule,
         AvatarModule,
         ProfessionModule,
-        SignUpModule
+        SignUpModule,
+        MovieModule,
+        PosterModule,
+        TrailerModule,
+        CrewModule,
+        CastModule,
+        LoginModule
     ],
     declarations: []
 })

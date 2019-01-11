@@ -1,14 +1,15 @@
+
+
+import {LoginService} from "./login.service";
+import {LoginComponent} from "./infLogin/login.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgModule} from "@angular/core";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
-import {SignupComponent} from "./regist/signup.component";
-
-import {SignupService} from "./signup.service";
 import {MatFormFieldModule} from "@angular/material";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
-    SignupComponent
+    LoginComponent
   ],
   imports: [
     HttpClientModule,
@@ -18,12 +19,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   exports: [
-    SignupComponent
+    LoginComponent
   ],
   providers: [
-    SignupService
+    LoginService
   ]
 })
-
-export class SignUpModule {
+export class LoginModule {
 }

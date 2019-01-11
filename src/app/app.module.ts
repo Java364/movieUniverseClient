@@ -5,17 +5,20 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 import { PageModule } from './page/page.module';
-
+import {
+   MatFormFieldModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
-    PageModule
-
+    PageModule,
+    MatFormFieldModule
   ],
 
   providers: [],
