@@ -8,16 +8,18 @@ import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import {SignupPageComponent} from "./signup-page/signup-page.component";
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { MovieComponent } from 'src/app/components/movie/movie.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent },
-  { path: 'signup', component: SignupPageComponent }
+  { path: 'signup', component: SignupPageComponent },
+  { path: 'login', component: LoginPageComponent }
 ];
 
 @NgModule({
 
-  declarations: [MainPageComponent, SignupPageComponent,MoviePageComponent],
+  declarations: [MainPageComponent, SignupPageComponent,MoviePageComponent, LoginPageComponent],
 
   imports: [
     RouterModule.forRoot(

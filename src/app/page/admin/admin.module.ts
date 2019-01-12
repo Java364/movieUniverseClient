@@ -11,7 +11,9 @@ import { MoviePageComponent } from '../user/movie-page/movie-page.component';
 const appRoutes: Routes = [
   {path: 'star', component: StarPageComponent},
   {path: 'country', component: CountryPageComponent},
-  {path: 'movie/:id',component:MoviePageComponent }
+  {path: 'movie/:id',component:MoviePageComponent },
+  {path: 'admin/star', component: StarPageComponent}
+  
 ];
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SignupService} from "../signup.service";
 import {User} from "../user";
-import {NgForm} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-signup',
@@ -10,29 +10,57 @@ import {NgForm} from "@angular/forms";
 })
 export class SignupComponent implements OnInit {
   public user: User;
+  userForm: FormGroup;
 
-  constructor(private signupService: SignupService) {
+  constructor(private signupService: SignupService,
+              private fb: FormBuilder) {
     this.user = new User();
   }
-
-
-  ngOnInit() {
+  ngOnInit(): void {
+    this.createForm();
   }
+  // createPost() {
+  //   this.signupService.registrate(this.user, (success) => {
+  //     this.user = <User>success;
+  //
+  //   });
+  // }
 
-  registrate = () => {
-    this.signupService.registrate(this.user, (success) => {
-      this.user = <User>success;
-
-    });
-  }
-  signupGeneral(form: NgForm) {
+  signupGeneral(userForm) {
     console.log('general sign in');
 
-    const firstName = form.value.firstName;
-    const lastName = form.value.lastName;
-    const email = form.value.email;
-    const password = form.value.password;
+    const firstName = userForm.value.firstName;
+    const lastName = userForm.value.lastName;
+    const email = userForm.value.email;
+    const password = userForm.value.password;
     this.signupService.signup(firstName, lastName, email, password);
+
+  }
+  firstnameControl: FormControl = new FormControl('', [
+    Validators.maxLength(3)
+  ]);
+  lastnameControl: FormControl = new FormControl('', [
+
+    Validators.maxLength(3)
+  ]);
+  emailControl: FormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+  passwordControl: FormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(6),
+    Validators.maxLength(16),
+  ]);
+
+  createForm() {
+    this.userForm = this.fb.group({
+      firstName: this.firstnameControl,
+      lastName: this.lastnameControl,
+      email: this.emailControl,
+      password: this.passwordControl
+
+    });
   }
 
 }

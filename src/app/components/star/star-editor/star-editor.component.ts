@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StarService } from '../star.service';
 import { Star } from '../star';
+import { LinkEditorComponent } from '../../link/link-editor/link-editor.component';
+import { LinksService } from '../../link/link.service';
 
 @Component({
   selector: 'app-star-editor',
@@ -12,7 +14,10 @@ export class StarEditorComponent implements OnInit {
   public star: Star;
   public stars: Star[] = [];
 
-  constructor(private starService: StarService) {
+  @ViewChild('linksEditor')
+  private linksEditor: LinkEditorComponent;
+
+  constructor(private starService: StarService, private linksService: LinksService) {
     this.star = new Star();
   }
 
@@ -25,6 +30,7 @@ export class StarEditorComponent implements OnInit {
       this.stars = <Star[]>success;
     });
   }
+
   updateStar = (id: number) => {
     this.starService.updateStar(id, this.star, (success) => {
       this.star = <Star>success;
