@@ -13,6 +13,7 @@ import {AuthService} from "../../core/auth.service";
     HttpClientModule
   ],
   providers: [
+    NavbarService,
     AuthService
   ],
   exports: [
