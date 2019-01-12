@@ -29,9 +29,9 @@ export class AuthService {
         }
         return true;
     }
+/*
 
-
-  /*  public authorize(login: string, password: string, callback: Function) {
+    public authorize(login: string, password: string, callback: Function) {
         const headers = new HttpHeaders();
         headers.append('Content-Type', 'application/json');
         this.http.post('api/auth/signin', {
@@ -45,7 +45,6 @@ export class AuthService {
         );
     }*/
   public login(email: string, password: string) {
-
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     this.http.post(`http://localhost:8080/auth/login`, {
@@ -58,10 +57,8 @@ export class AuthService {
         console.log("sddsdsds");
         console.log("get token -- " +this.getToken());
         this.router.navigate(['/main']);
-
       }
     );
-
   }
   public hasToken(): boolean {
     return this.getToken() != null;

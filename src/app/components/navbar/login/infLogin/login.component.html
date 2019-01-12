@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!--<div class="wrapper">
   <form #f="ngForm" class="form-login">
     <h2 class="form-login-heading"></h2>
     <input type="text" class="form-control" id="usernameOrEmail" ngModel name="email"
@@ -7,7 +7,32 @@
            required=""/>
     <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="loginGeneral(f)">Login</button>
   </form>
+</div>-->
+
+
+<div class="block-body">
+  <div class="container">
+    <div class="site__info-wrapper">
+      <div id="particles" class="particles__wrap">
+        <form #f="ngForm" class="enter__form">
+          <div class="enter__form-error">
+            <!-- Email is <strong>required</strong>-->
+          </div>
+          <label for="user_name" class="enter__form-label">
+            <input type="text" placeholder="Enter your email" ngModel name="email" required id="user_name"
+                   class="enter__form-input"><br>
+          </label>
+          <div class="enter__form-error">
+            <!--   Password is <strong>required</strong>!-->
+          </div>
+          <label for="user__password" class="enter__form-label">
+            <input type="password" placeholder="Password" ngModel name="password" required id="user__password"
+                   class="enter__form-input"><br>
+          </label>
+          <button type="button" class="btn btn-outline-danger" (click)="loginGeneral(f)">Login</button>
+          <!--      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="loginGeneral(f)">Login</button>-->
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-

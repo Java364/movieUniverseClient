@@ -1,4 +1,4 @@
-<div class="NewUserForm">
+<!--<div class="NewUserForm">
   <div class="title">Registration form</div>
   <form [formGroup]="userForm" (ngSubmit)="signupGeneral(userForm)">
     <div class="form-group">
@@ -39,39 +39,72 @@
     </div>
   </form>
 
-</div>
+</div>-->
 
 
 
-<!--
 <div class="block-body">
   <div class="container">
 
     <div class="site__info-wrapper">
       <div id="particles" class="particles__wrap">
-        <form action="/login" method="post" class="enter__form">
-          <p class="enter__form-error">
-
-          </p>
+        <form [formGroup]="userForm" (ngSubmit)="signupGeneral(userForm)" class="enter__form">
+          <div class="enter__form-error">
+            <mat-error *ngIf="firstnameControl.hasError('maxlength') ">
+              Name is too long!
+            </mat-error>
+          </div>
           <label for="user_name" class="enter__form-label">
-            <span>Login</span>
-            <input type="text" name="name" id="user_name" class="enter__form-input"><br>
-            <p class="enter__form-error">
-              dssd
-            </p>
+
+            <input type="text" matInput placeholder="Firstname" formControlName="firstName" required id="user_name" class="enter__form-input"><br>
+
           </label>
+
+          <div class="enter__form-error">
+            <mat-error *ngIf="lastnameControl.hasError('maxlength') ">
+              String is too long!
+            </mat-error>
+          </div>
+          <label for="user_name" class="enter__form-label">
+
+            <input type="text" matInput placeholder="LastName" formControlName="lastName" required id="user_name" class="enter__form-input"><br>
+
+          </label>
+
+          <div class="enter__form-error">
+            <mat-error *ngIf="emailControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="emailControl.hasError('email') ">
+              <strong> Please enter a valid email address!</strong>
+            </mat-error>
+          </div>
+          <label for="user_name" class="enter__form-label">
+
+            <input type="text" matInput placeholder="Enter your email" formControlName="email" required id="user_name" class="enter__form-input"><br>
+
+          </label>
+
+          <div class="enter__form-error">
+            <mat-error *ngIf="passwordControl.hasError('minlength') && !passwordControl.hasError('required')">
+              <strong> Password must contain more than 6 characters!</strong>
+            </mat-error>
+            <mat-error *ngIf="passwordControl.hasError('maxlength') && !passwordControl.hasError('required')">
+             <strong> Password must contain less than 16 characters</strong>
+            </mat-error>
+            <mat-error *ngIf="passwordControl.hasError('required')">
+              Password is <strong>required</strong>!
+            </mat-error>
+          </div>
           <label for="user__password" class="enter__form-label">
-            <span>Password</span>
-            <input type="password" name="password" id="user__password" class="enter__form-input"><br>
-            <p class="enter__form-error">
-              sdsd
-            </p>
+            <input type="password" matInput placeholder="Password" formControlName="password" required id="user__password" class="enter__form-input"><br>
           </label>
-          <input type="submit" class="enter__form-submit">
+
+          <button type="submit" class="btn btn-outline-danger" >Sign up</button>
+         <!-- <input type="submit" class="enter__form-submit">-->
         </form>
       </div>
     </div>
   </div>
 
 </div>
--->
