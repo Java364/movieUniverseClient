@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./token.component.css']
 })
 export class TokenComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
   }
-
 }

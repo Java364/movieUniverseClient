@@ -13,7 +13,6 @@ export class AuthInterceptor implements HttpInterceptor {
     constructor(private authService: AuthService) {
 
     }
-
     addToken(req: HttpRequest<any>, token: string): HttpRequest<any> {
         return req.clone({ setHeaders: { Authorization: token } });
     }
@@ -74,9 +73,11 @@ export class AuthInterceptor implements HttpInterceptor {
             );
         }
     }
-
     logoutUser() {
         this.authService.removeToken();
         return throwError('');
     }
 }
+
+
+

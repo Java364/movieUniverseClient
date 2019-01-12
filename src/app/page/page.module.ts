@@ -4,6 +4,7 @@ import { AdminModule } from './admin/admin.module';
 import { PageComponent } from './page.component';
 import { UserModule } from './user/user.module';
 import { NavbarModule } from '../components/navbar/navbar.module';
+import {AuthService} from "../core/auth.service";
 
 import { MovieModule } from '../components/movie/movie.module';
 
@@ -19,6 +20,10 @@ import { MovieModule } from '../components/movie/movie.module';
   ],
   exports: [
     PageComponent
+  ],
+  providers: [
+    /*LoginService,*/
+    AuthService
   ]
 })
 export class PageModule { }
