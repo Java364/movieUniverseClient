@@ -29,6 +29,9 @@ export class AuthService {
         }
         return true;
     }
+  public hasToken(): boolean {
+    return this.getToken() != null;
+  }
 
   /*  public authorize(login: string, password: string, callback: Function) {
         const headers = new HttpHeaders();

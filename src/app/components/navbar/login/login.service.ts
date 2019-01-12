@@ -1,4 +1,3 @@
-/*
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
@@ -14,7 +13,7 @@ export class LoginService {
 
 
      }
- /!* login(usernameOrEmail: string, password: string) {
+ /* login(usernameOrEmail: string, password: string) {
 
     const headers = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
 
@@ -28,10 +27,10 @@ export class LoginService {
         this.router.navigate(['/']);
         return token;
       });
-  }*!/
+  }*/
 
 
-  public login(email: string, password: string) {
+/*  public login(email: string, password: string) {
 
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
@@ -49,7 +48,7 @@ export class LoginService {
       }
     );
 
-  }
+  }*/
 
   public getToken(): string {
     return localStorage.getItem('token');
@@ -61,5 +60,4 @@ export class LoginService {
   }
 
 }
-*/
 

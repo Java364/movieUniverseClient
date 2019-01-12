@@ -15,7 +15,8 @@ import {HttpService} from "./http.service";
   ],
   providers: [
     AuthService,
-    HttpService
+    HttpService,
+
   ]
 })
 export class CoreModule { }

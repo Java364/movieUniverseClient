@@ -73,9 +73,11 @@ export class AuthInterceptor implements HttpInterceptor {
             );
         }
     }
-
     logoutUser() {
         this.authService.removeToken();
         return throwError('');
     }
 }
+
+
+
