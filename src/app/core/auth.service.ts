@@ -29,9 +29,7 @@ export class AuthService {
         }
         return true;
     }
-  public hasToken(): boolean {
-    return this.getToken() != null;
-  }
+
 
   /*  public authorize(login: string, password: string, callback: Function) {
         const headers = new HttpHeaders();
@@ -64,6 +62,9 @@ export class AuthService {
       }
     );
 
+  }
+  public hasToken(): boolean {
+    return this.getToken() != null;
   }
     public refreshToken(): Observable<string> {
         return this.http.post<string>('api/auth/refresh', this.getToken());

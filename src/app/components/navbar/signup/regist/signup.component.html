@@ -1,50 +1,77 @@
 <div class="NewUserForm">
   <div class="title">Registration form</div>
-  <form [formGroup]="userForm"  (ngSubmit)="signupGeneral(userForm)">
+  <form [formGroup]="userForm" (ngSubmit)="signupGeneral(userForm)">
     <div class="form-group">
-        <input matInput placeholder="Firstname" formControlName="firstName" required>
-        <mat-error *ngIf="firstnameControl.hasError('maxlength') ">
-          String is too long
-        </mat-error>
-
+      <input matInput placeholder="Firstname" formControlName="firstName" required>
+      <mat-error *ngIf="firstnameControl.hasError('maxlength') ">
+        Name is too long!
+      </mat-error>
       <div class="form-group">
-          <input  matInput placeholder="Lastname" formControlName="lastName" required>
-          <mat-error *ngIf="lastnameControl.hasError('maxlength') ">
-            String is too long
-          </mat-error>
-
-
+        <input matInput placeholder="Lastname" formControlName="lastName" required>
+        <mat-error *ngIf="lastnameControl.hasError('maxlength') ">
+          String is too long!
+        </mat-error>
       </div>
       <div class="form-group">
-          <input matInput placeholder="Enter your email" formControlName="email"  required>
+        <input matInput placeholder="Enter your email" formControlName="email" required>
         <mat-error *ngIf="emailControl.hasError('required')">
           Email is <strong>required</strong>
         </mat-error>
         <mat-error *ngIf="emailControl.hasError('email') ">
-            Please enter a valid email address
-          </mat-error>
-
+          Please enter a valid email address!
+        </mat-error>
       </div>
       <div class="form-group">
-
-          <input matInput placeholder="Password" formControlName="password" required >
-
-
-          <mat-error *ngIf="passwordControl.hasError('minlength') && !passwordControl.hasError('required')">
-            Password must contain more than 6 characters
-          </mat-error>
-          <mat-error *ngIf="passwordControl.hasError('maxlength') && !passwordControl.hasError('required')">
-            Password must contain less than 16 characters
-          </mat-error>
-          <mat-error *ngIf="passwordControl.hasError('required')">
-            Password is <strong>required</strong>
-          </mat-error>
-
+        <input matInput placeholder="Password" formControlName="password" required>
+        <mat-error *ngIf="passwordControl.hasError('minlength') && !passwordControl.hasError('required')">
+          Password must contain more than 6 characters!
+        </mat-error>
+        <mat-error *ngIf="passwordControl.hasError('maxlength') && !passwordControl.hasError('required')">
+          Password must contain less than 16 characters
+        </mat-error>
+        <mat-error *ngIf="passwordControl.hasError('required')">
+          Password is <strong>required</strong>!
+        </mat-error>
       </div>
-    <div class="form-group">
-      <button mat-button class="button">Register</button>
-    </div>
+      <div class="form-group">
+        <button mat-button class="button">Sign up</button>
+      </div>
     </div>
   </form>
 
 </div>
+
+
+
+<!--
+<div class="block-body">
+  <div class="container">
+
+    <div class="site__info-wrapper">
+      <div id="particles" class="particles__wrap">
+        <form action="/login" method="post" class="enter__form">
+          <p class="enter__form-error">
+
+          </p>
+          <label for="user_name" class="enter__form-label">
+            <span>Login</span>
+            <input type="text" name="name" id="user_name" class="enter__form-input"><br>
+            <p class="enter__form-error">
+              dssd
+            </p>
+          </label>
+          <label for="user__password" class="enter__form-label">
+            <span>Password</span>
+            <input type="password" name="password" id="user__password" class="enter__form-input"><br>
+            <p class="enter__form-error">
+              sdsd
+            </p>
+          </label>
+          <input type="submit" class="enter__form-submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+-->
