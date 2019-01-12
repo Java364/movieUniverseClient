@@ -41,9 +41,8 @@ export class SignupComponent implements OnInit {
     Validators.maxLength(10)
   ]);
   lastnameControl: FormControl = new FormControl('', [
-    Validators.maxLength(10)
+    Validators.maxLength(15)
   ]);
-
   emailControl: FormControl = new FormControl('', [
     Validators.required,
     Validators.email,
