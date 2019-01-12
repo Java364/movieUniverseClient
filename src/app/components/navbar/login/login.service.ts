@@ -1,17 +1,20 @@
+/*
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 import {Router} from "@angular/router";
+import {HttpService} from "../../../core/http.service";
+
 
 @Injectable()
 export class LoginService {
 
   constructor( private router: Router,
-               private httpClient: HttpClient) {
+               private http: HttpService) {
 
 
      }
- /* login(usernameOrEmail: string, password: string) {
+ /!* login(usernameOrEmail: string, password: string) {
 
     const headers = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
 
@@ -25,26 +28,38 @@ export class LoginService {
         this.router.navigate(['/']);
         return token;
       });
-  }*/
+  }*!/
+
 
   public login(email: string, password: string) {
 
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    this.httpClient.post(`http://localhost:8080/auth/login`, {
+    this.http.post(`http://localhost:8080/auth/login`, {
       email: email,
       password: password
     }, { responseType: 'text' }).subscribe(
       (success) => {
         this.setToken(success);
-        alert( this.setToken(success));
+        console.log(success);
+
         this.router.navigate(['/']);
+
+
       }
     );
 
   }
+
+  public getToken(): string {
+    return localStorage.getItem('token');
+  }
+
+
   public setToken(token: string) {
     localStorage.setItem('token', token);
   }
 
 }
+*/
+

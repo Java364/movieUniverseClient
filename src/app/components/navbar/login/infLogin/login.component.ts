@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {User} from "../../signup/user";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {SignupService} from "../../signup/signup.service";
-import {LoginService} from "../login.service";
+/*import {LoginService} from "../login.service";*/
+import {AuthService} from "../../../../core/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
   public user: User;
   userf: FormGroup;
 
-  constructor(private loginService: LoginService,
+  constructor(/*private loginService: LoginService,*/
+              private authService: AuthService,
+
               private fb: FormBuilder) {
     this.user = new User();
   }
@@ -25,8 +28,8 @@ export class LoginComponent implements OnInit {
   loginGeneral(userf) {
     const email = userf.value.email;
     const password = userf.value.password;
-    this.loginService.login(email, password);
-console.log("eweewew");
+    this.authService.login(email, password);
+
 
   }
 

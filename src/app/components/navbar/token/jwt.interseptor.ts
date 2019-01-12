@@ -12,6 +12,8 @@ export class JwtInterceptor implements HttpInterceptor {
         setHeaders: {Authorization: `Bearer ` + localStorage.getItem('jwtToken')}
       });
     }
+
+
     return next.handle(request);
   }
 }
