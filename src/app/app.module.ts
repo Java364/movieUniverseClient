@@ -9,6 +9,7 @@ import {
    MatFormFieldModule
 } from '@angular/material';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,9 +21,12 @@ import {
     PageModule,
     MatFormFieldModule
   ],
-
   providers: [
-
+    /*{
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },*/
 
   ],
   bootstrap: [AppComponent]

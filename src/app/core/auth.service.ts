@@ -29,6 +29,11 @@ export class AuthService {
         }
         return true;
     }
+  public forgotPass(email: string): Observable<any> {
+      this.router.navigate(['/login']);
+    return this.http.get<String>('http://localhost:8080/auth/forgotPass/' + email);
+
+  }
 /*
 
     public authorize(login: string, password: string, callback: Function) {
@@ -53,9 +58,7 @@ export class AuthService {
     }, { responseType: 'text' }).subscribe(
       (success) => {
         this.setToken(success);
-        console.log(success);
-        console.log("sddsdsds");
-        console.log("get token -- " +this.getToken());
+
         this.router.navigate(['/main']);
       }
     );
