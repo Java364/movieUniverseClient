@@ -13,17 +13,12 @@ import { Movie } from '../movie/movie';
 export class PosterComponent implements OnInit {
   movieId: number;
   public poster: Poster;
-  constructor(private route: ActivatedRoute, private movie: Movie, private posterService: PosterService) { this.poster = new Poster(); }
+  constructor(private route: ActivatedRoute, private posterService: PosterService) { this.poster = new Poster(); }
 
   ngOnInit() {
     this.movieId = +this.route.snapshot.paramMap.get('id');
-    this.GetPoster();
+  
   }
 
-  GetPoster() {
-    this.posterService.get(this.movie, (success) => {
-      this.poster = <Poster>success;
-    }
-    )
-  }
+  
 }

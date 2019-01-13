@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row p-3">
+    <h2 class="text-align-center col-md-10">Movie page!</h2>
+    
+  </div>
+  <table class="table table-hover">
+    <tr>
+      <th>Name</th>
+      <th>Id</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Age Limitation</th>
+
+      <th></th>
+      <th></th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>{{movie.movieName}}</td>
+        <td>{{movie.id}}</td>
+        <td>{{movie.year}}</td>
+        <td>{{movie.duration}}</td>
+        <td>{{movie.ageLimitation}}</td>
+        <td>
+          <button (click)="getMovie(movie.id)" type="button" class="btn btn-outline-primary" data-toggle="modal"
+            data-target="#exampleModal">Open</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
