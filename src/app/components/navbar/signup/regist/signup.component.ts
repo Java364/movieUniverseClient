@@ -38,7 +38,7 @@ export class SignupComponent implements OnInit {
 
   }
   firstnameControl: FormControl = new FormControl('', [
-    Validators.maxLength(10)
+    Validators.maxLength(15)
   ]);
   lastnameControl: FormControl = new FormControl('', [
     Validators.maxLength(15)
@@ -50,7 +50,7 @@ export class SignupComponent implements OnInit {
   passwordControl: FormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(6),
-    Validators.maxLength(16),
+    Validators.maxLength(20),
   ]);
 
   createForm() {
