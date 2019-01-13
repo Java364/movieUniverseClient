@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../movie/movie.service';
 import { PosterService } from './poster.service';
@@ -11,13 +11,18 @@ import { Movie } from '../movie/movie';
   styleUrls: ['./poster.component.css']
 })
 export class PosterComponent implements OnInit {
-  movieId: number;
+  @Input() movie: Movie;
   public poster: Poster;
-  constructor(private route: ActivatedRoute, private posterService: PosterService) { this.poster = new Poster(); }
+  constructor(private route: ActivatedRoute, private posterService: PosterService) {this.poster=new Poster();}
 
   ngOnInit() {
-    this.movieId = +this.route.snapshot.paramMap.get('id');
-  
+    this.showPoster(this.movie.poster);
+  }
+
+  showPoster = (url: string) => {
+    this.posterService.getPoster(url, (success) => {
+      this.poster = <Poster>success;
+    });
   }
 
   

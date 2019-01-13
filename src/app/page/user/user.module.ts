@@ -17,7 +17,7 @@ const appRoutes: Routes = [
   { path: 'signup', component: SignupPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'catalog', component: CatalogPageComponent },
-  { path: 'movie', component: MoviePageComponent }
+  { path: 'movie/:id', component: MoviePageComponent }
 ];
 
 @NgModule({
