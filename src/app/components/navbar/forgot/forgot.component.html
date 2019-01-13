@@ -1,0 +1,46 @@
+<!--
+<div class="user_forms-forgot">
+  <h2 class="forms_title">Forgot Password</h2>
+  <form class="forms_form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <fieldset class="forms_fieldset">
+      <div class="forms_field">
+        <input type="email" id="emailFor" placeholder="Email" class="form-control" ngModel name="email"/>
+      </div>
+    </fieldset>
+    <div class="forms_buttons">
+      <button type="submit" class="forms_buttons-action">Send reset link</button>
+    </div>
+  </form>
+</div>
+-->
+
+
+<div class="block-body">
+  <div class="container">
+    <div class="site__info-wrapper">
+      <div id="particles" class="particles__wrap">
+        <!--<form  #f="ngForm" class="enter__form">-->
+          <form class="enter__form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div class="enter__form-error">
+            <!-- Email is <strong>required</strong>-->
+          </div>
+          <label for="user_name" class="enter__form-label">
+            <input type="email" placeholder="Enter your email" ngModel name="email" required id="user_name"
+                   class="enter__form-input"><br>
+          </label>
+          <div class="enter__form-error">
+            <!--   Password is <strong>required</strong>!-->
+          </div>
+          <!--  <button type="submit" class="forms_buttons-action">Send reset link</button>-->
+
+          <button type="submit" class="btn btn-outline-danger" >Send reset link</button>
+          <!--      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="loginGeneral(f)">Login</button>-->
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
