@@ -1,6 +1,3 @@
-
-
-import {LoginService} from "./login.service";
 import {LoginComponent} from "./infLogin/login.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgModule} from "@angular/core";
@@ -23,7 +20,6 @@ import {AuthService} from "../../../core/auth.service";
     LoginComponent
   ],
   providers: [
-
     AuthService
   ]
 })
