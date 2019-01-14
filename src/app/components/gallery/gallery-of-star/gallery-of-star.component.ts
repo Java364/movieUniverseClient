@@ -17,6 +17,7 @@ export class GalleryOfStarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.showStarsGallery(this.galleryLink);
   }
 
   showStarsGallery = (link: string) => {

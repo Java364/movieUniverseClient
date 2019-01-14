@@ -15,6 +15,7 @@ export class CountriesOfStarComponent implements OnInit {
   constructor(private countryService: CountryService) { }
 
   ngOnInit() {
+    this.showAllStarsCountries(this.starId);
   }
 
   showAllStarsCountries = (id: number) => {

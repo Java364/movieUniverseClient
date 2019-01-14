@@ -17,6 +17,7 @@ export class AvatarOfStarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.showStarsAvatar(this.avatarLink);
   }
 
   showStarsAvatar = (link: string) => {

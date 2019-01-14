@@ -15,6 +15,7 @@ export class ProfessionsOfStarComponent implements OnInit {
   constructor(private professionService: ProfessionService) { }
 
   ngOnInit() {
+    this.showAllStarsProfessions(this.professionsLink);
   }
 
   showAllStarsProfessions = (professionLink: string) => {

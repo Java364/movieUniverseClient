@@ -1,3 +1,39 @@
-<p>
-  star-page-by-id works!
-</p>
+<div class="row">
+  <div class="form-group col-md-7">
+    <label>First Name: {{star.firstName}}</label>
+  </div>
+  <div class="form-group col-md-7">
+    <label>Last Name: {{star.lastName}}</label>
+  </div>
+  <div class="form-group col-md-7">
+    <label>City of birth: {{star.cityOfBirth}}</label>
+  </div>
+  <div class="form-group col-md-7">
+    <app-countries-of-star starId={{star.id}}></app-countries-of-star><br>
+    <app-country-selector></app-country-selector>
+  </div>
+  <div class="form-group col-md-7">
+    <label>Id: {{star.id}}</label>
+  </div>
+  <div class="form-group col-md-7">
+    <label>Bio: {{star.biography}}</label>
+  </div>
+  <div class="form-group col-md-7">
+    <label>Growth:{{star.growth}}</label>
+  </div>
+
+  <div class="form-group col-md-7">
+    <app-link-of-star *ngIf="star.id" starId={{star.id}}></app-link-of-star><br>
+    <app-link-editor starMovieId={{star.id}}></app-link-editor><br>
+  </div>
+
+  <div class="form-group col-md-7">
+    <app-gallery-of-star *ngIf="star.gallery" galleryLink={{star.gallery}}></app-gallery-of-star>
+  </div>
+  <div class="form-group col-md-7">
+    <app-avatar-of-star *ngIf="star.avatar" avatarLink={{star.avatar}}></app-avatar-of-star>
+  </div>
+  <div class="form-group col-md-7">
+    <app-professions-of-star *ngIf="star.professions" professionsLink={{star.professions}}></app-professions-of-star><br>
+    <app-profession-edit professionCreateLink={{star.professions}}></app-profession-edit>
+  </div>
