@@ -1,5 +1,9 @@
 <p>
   movie-page works!
+  {{movie.year}}
+  
 </p>
-<app-movie></app-movie>
-<app-poster></app-poster>
+
+
+
+<app-poster *ngIf="movie" [movie] = "movie"></app-poster>

@@ -1,3 +1,6 @@
+
+import { MovieComponent } from 'src/app/components/movie/movie.component';
+import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {MainPageComponent} from "./main/main-page/main-page.component";
@@ -15,12 +18,14 @@ const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent },
   { path: 'signup', component: SignupPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'catalog', component: CatalogPageComponent },
+  { path: 'movie/:id', component: MoviePageComponent },
   { path: 'login/forgot', component: ForgotPageComponent }
 ];
 
 @NgModule({
 
-  declarations: [MainPageComponent, SignupPageComponent,MoviePageComponent, LoginPageComponent, ForgotPageComponent],
+  declarations: [MainPageComponent, SignupPageComponent,MoviePageComponent, LoginPageComponent, ForgotPageComponent, CatalogPageComponent],
 
   imports: [
     RouterModule.forRoot(
@@ -35,7 +40,8 @@ const appRoutes: Routes = [
     MainPageComponent,
     NavbarComponent,
     RouterModule,
-    MoviePageComponent
+    MoviePageComponent,
+    CatalogPageComponent
   ]
 })
 export class UserModule { }

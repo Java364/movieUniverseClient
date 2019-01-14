@@ -3,9 +3,9 @@ export class Movie {
     name: string;
     year: number;
     id: number;
-    description :string;
+    description: string;
     duration: number;
-    ageLimitation: string;
+    ageLimitation: number;
     self: string;
     genres: string;
     poster: string;
