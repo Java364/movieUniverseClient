@@ -17,6 +17,9 @@ import { TrailerModule } from './trailer/trailer.module';
 import { CrewModule } from './crew/crew.module';
 import { CastModule } from './cast/cast.module';
 import {LoginModule} from "./navbar/login/login.module";
+import { ProfessionTypeEditorComponent } from './profession-type/profession-type-editor/profession-type-editor.component';
+import { ProfessionTypeSelectorComponent } from './profession-type/profession-type-selector/profession-type-selector.component';
+import { ProfessionTypeModule } from './profession-type/profession-type.module';
 
 
 
@@ -36,7 +39,8 @@ import {LoginModule} from "./navbar/login/login.module";
         TrailerModule,
         CrewModule,
         CastModule,
-        LoginModule
+        LoginModule,
+        ProfessionTypeModule
 
     ],
     imports: [
@@ -56,7 +60,8 @@ import {LoginModule} from "./navbar/login/login.module";
         TrailerModule,
         CrewModule,
         CastModule,
-        LoginModule
+        LoginModule,
+        ProfessionTypeModule
     ],
     declarations: []
 })

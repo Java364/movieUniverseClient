@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Star } from 'src/app/components/star/star';
-import { StarService } from 'src/app/components/star/star.service';
+import { StarService } from '../star.service';
+import { Star } from '../star';
 
 @Component({
-  selector: 'app-star-page',
-  templateUrl: './star-page.component.html',
-  styleUrls: ['./star-page.component.css']
+  selector: 'app-star-list',
+  templateUrl: './star-list.component.html',
+  styleUrls: ['./star-list.component.css']
 })
-export class StarPageComponent implements OnInit {
+export class StarListComponent implements OnInit {
 
   public stars: Star[] = [];
 

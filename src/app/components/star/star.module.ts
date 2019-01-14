@@ -10,11 +10,14 @@ import { CoreModule } from 'src/app/core/core.module';
 import { CountryModule } from '../country/country.module';
 import { AvatarModule } from '../avatar/avatar.module';
 import { ProfessionModule } from '../profession/profession.module';
+import { ProfessionTypeModule } from '../profession-type/profession-type.module';
+import { StarListComponent } from './star-list/star-list.component';
 
 @NgModule({
     declarations: [
         StarEditorComponent,
-        StarCreatorComponent
+        StarCreatorComponent,
+        StarListComponent
     ],
     imports: [
         CommonModule,
@@ -24,12 +27,14 @@ import { ProfessionModule } from '../profession/profession.module';
         CoreModule,
         CountryModule,
         AvatarModule,
-        ProfessionModule
+        ProfessionModule,
+        ProfessionTypeModule
 
     ],
     exports: [
         StarEditorComponent,
-        StarCreatorComponent
+        StarCreatorComponent,
+        StarListComponent
     ],
     providers: [
         StarService

@@ -17,7 +17,9 @@ export class LinkOfStarComponent implements OnInit {
     this.link = new Links();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.showAllStarsLinks(this.starId);
+  }
 
   showAllStarsLinks = (id: number) => {
     this.linkService.showStarsLinks(id, (success) => {

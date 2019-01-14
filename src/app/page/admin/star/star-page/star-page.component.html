@@ -6,3 +6,10 @@
 <app-avatar-editor></app-avatar-editor>
 <app-profession-edit></app-profession-edit>
 <app-star-creator></app-star-creator>
+<div *ngFor="let star of stars">
+  <label>{{star.id}}</label>.
+  <label>{{star.firstName}} </label>
+  <label>{{star.lastName}}</label>
+  <a routerLink="/admin/star/{{star.id}}" class="nav-link">get</a>
+  <td> <button (click)="getStar(star.id)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
+</div>

@@ -45,7 +45,7 @@
           <input type="text" [(ngModel)]="star.cityOfBirth" name="cityOfBirth" class="form-control" />
         </div>
 
-        <app-link-of-star starId = {{star.id}}></app-link-of-star><br>
+        <app-link-of-star *ngIf="star.id" starId = {{star.id}}></app-link-of-star><br>
 
         <app-link-editor starMovieId={{star.id}}></app-link-editor><br><br>
 
@@ -58,7 +58,10 @@
         <app-avatar-of-star avatarLink = {{star.avatar}}></app-avatar-of-star><br><br>
 
         <app-professions-of-star professionsLink = {{star.professions}}></app-professions-of-star><br>
+        
         <app-profession-edit professionCreateLink = {{star.professions}}></app-profession-edit>
+
+        <app-profession-type-selector></app-profession-type-selector>
 
 
       </div>
