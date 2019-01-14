@@ -60,15 +60,17 @@ export class HttpService {
         );
     }
 
+    public getHeaderOptions() {
 
-    private getHeaderOptions() {
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
-                'Authorization': this.authService.getToken()
+                'Authorization': 'Bearer ' + this.authService.getToken()
             })
         };
-        return {};
+
+
+        return httpOptions;
     }
 }
 

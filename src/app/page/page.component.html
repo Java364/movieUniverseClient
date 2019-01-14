@@ -27,6 +27,7 @@
       <li class="nav-item"  *ngIf="hasToken()">
         <a class="nav-link" (click)="logOut()">Log out</a>
       </li>
+
     </ul>
   </div>
 </nav>
@@ -45,6 +46,7 @@
     <li class="nav-item">
       <a routerLink="catalog" class="nav-link">Catalog</a>
   </li>
+
 </ul>
 <div class="border border-top-0 rounded p-5">
     <router-outlet></router-outlet>
