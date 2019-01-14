@@ -1,9 +1,4 @@
-<div *ngFor="let star of stars">
-  <label>{{star.id}}</label>.
-  <label>{{star.firstName}} </label>
-  <label>{{star.lastName}}</label>
-  <td> <button (click)="getStar(star.id)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
-</div>
+<td> <button (click)="getStar(starId)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -44,26 +39,6 @@
           <label for="cityOfBirth">City of birth:</label>
           <input type="text" [(ngModel)]="star.cityOfBirth" name="cityOfBirth" class="form-control" />
         </div>
-
-        <app-link-of-star *ngIf="star.id" starId = {{star.id}}></app-link-of-star><br>
-
-        <app-link-editor starMovieId={{star.id}}></app-link-editor><br><br>
-
-        <app-countries-of-star starId = {{star.id}}></app-countries-of-star><br>
-
-        <app-country-selector></app-country-selector>
-
-        <app-gallery-of-star galleryLink = {{star.gallery}}></app-gallery-of-star> <br><br>
-
-        <app-avatar-of-star avatarLink = {{star.avatar}}></app-avatar-of-star><br><br>
-
-        <app-professions-of-star professionsLink = {{star.professions}}></app-professions-of-star><br>
-        
-        <app-profession-edit professionCreateLink = {{star.professions}}></app-profession-edit>
-
-        <app-profession-type-selector></app-profession-type-selector>
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -72,6 +47,3 @@
     </div>
   </div>
 </div>
-
-
-<app-gallery-editor></app-gallery-editor>

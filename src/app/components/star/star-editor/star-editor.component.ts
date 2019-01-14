@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { StarService } from '../star.service';
 import { Star } from '../star';
 import { LinkEditorComponent } from '../../link/link-editor/link-editor.component';
@@ -19,7 +19,9 @@ export class StarEditorComponent implements OnInit {
   private linksEditor: LinkEditorComponent;
 
   @ViewChild('countrySelector')
-    private countrySelector: CountrySelectorComponent;
+  private countrySelector: CountrySelectorComponent;
+
+  @Input() starId: number;
 
   constructor(private starService: StarService, private linksService: LinksService) {
     this.star = new Star();
@@ -65,7 +67,7 @@ export class StarEditorComponent implements OnInit {
   addCountries = () => {
     let countries = this.countrySelector.getSelectedCountriesDto();
     this.starService.addCountries(this.star.id, countries, (success) => {
-        console.log(success)
+      console.log(success)
     })
-}
+  }
 }
