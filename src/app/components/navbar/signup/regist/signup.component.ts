@@ -52,7 +52,6 @@ export class SignupComponent implements OnInit {
     Validators.minLength(6),
     Validators.maxLength(20),
   ]);
-
   createForm() {
     this.userForm = this.fb.group({
       firstName: this.firstnameControl,

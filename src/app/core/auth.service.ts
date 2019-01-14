@@ -57,8 +57,8 @@ export class AuthService {
       password: password
     }, { responseType: 'text' }).subscribe(
       (success) => {
-        this.setToken(success);
-
+        this.setToken(JSON.parse(success)['accessToken']);
+console.log(success)
         this.router.navigate(['/main']);
       }
     );
