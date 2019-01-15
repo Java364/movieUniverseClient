@@ -26,4 +26,17 @@ export class LinkOfStarComponent implements OnInit {
       this.links = <Links[]>success;
     });
   }
+
+  updatePut(id: number) {
+    this.linkService.updateLinks(id, this.link, (success) => {
+      this.link = <Links>success;
+      this.showAllStarsLinks(this.starId);
+    });
+  }
+
+  linkGet(id: number) {
+    this.linkService.getLink(id, (success) => {
+      this.link = <Links>success;
+    });
+  }
 }

@@ -11,7 +11,7 @@
       </div>
       <div class="modal-body">
           <div class="form-group col-md-7">
-              <label>starId: {{starMovieId}}</label>
+              <label>starId: {{urlLink}}</label>
             </div>
         <form>
           <div class="form-group row">
@@ -32,7 +32,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" (click)="createLink(starMovieId)" data-dismiss="modal">Save changes</button>
+            <button type="button" class="btn btn-primary" (click)="createLink(urlLink)" data-dismiss="modal">Save changes</button>
           </div>
         </form>
       </div>
