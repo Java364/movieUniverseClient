@@ -8,24 +8,24 @@ import {RouterModule, Routes} from "@angular/router";
 import {BrowserModule} from "@angular/platform-browser";
 import {ComponentsModule} from "src/app/components/components.module";
 import {NavbarComponent} from "src/app/components/navbar/navbar.component";
-import {SignupPageComponent} from "./signup-page/signup-page.component";
+
 import {MoviePageComponent} from "./movie-page/movie-page.component";
-import {LoginPageComponent} from "./login-page/login-page.component";
-import {ForgotPageComponent} from "./forgot/forgot-page.component";
+
 
 
 const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent },
-  { path: 'signup', component: SignupPageComponent },
-  { path: 'login', component: LoginPageComponent },
-  { path: 'catalog', component: CatalogPageComponent },
-  { path: 'movie/:id', component: MoviePageComponent },
-  { path: 'login/forgot', component: ForgotPageComponent }
+    { path: 'catalog', component: CatalogPageComponent },
+    { path: 'movie/:id', component: MoviePageComponent },
+
+
 ];
 
 @NgModule({
 
-  declarations: [MainPageComponent, SignupPageComponent,MoviePageComponent, LoginPageComponent, ForgotPageComponent, CatalogPageComponent],
+
+  declarations: [MainPageComponent, MoviePageComponent, CatalogPageComponent],
+
 
   imports: [
     RouterModule.forRoot(
