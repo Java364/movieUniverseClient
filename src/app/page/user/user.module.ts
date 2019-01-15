@@ -7,18 +7,21 @@ import { ComponentsModule } from 'src/app/components/components.module';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { SignupPageComponent } from '../auth/signup-page/signup-page.component';
-import { StarUserComponent } from 'src/app/components/starUser/star-user.component';
+import { StarPageComponent } from './star-page/star-page.component';
+import { StarListPageComponent } from './star-list/star-list-page.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent },
   { path: 'signup', component: SignupPageComponent },
-  { path: 'star', component: StarUserComponent }
+  { path: 'star', component: StarPageComponent },
+  { path: 'star-list', component: StarListPageComponent }
 ];
 
 @NgModule({
 
-  declarations: [MainPageComponent, MoviePageComponent, StarUserComponent],
+  declarations: [MainPageComponent, MoviePageComponent, StarPageComponent, StarListPageComponent],
 
   imports: [
     RouterModule.forRoot(
@@ -27,11 +30,13 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    CoreModule
   ],
   exports: [
     MainPageComponent,
-    StarUserComponent,
+    StarPageComponent,
+    StarListPageComponent,
     NavbarComponent,
     RouterModule
   ]
