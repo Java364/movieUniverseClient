@@ -1,13 +1,13 @@
-import {LoginComponent} from "./infLogin/login.component";
+import {AuthService} from "../../../core/auth.service";
+import {ForgotComponent} from "./forgot.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material";
 import {NgModule} from "@angular/core";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
-import {MatFormFieldModule} from "@angular/material";
-import {AuthService} from "../../../core/auth.service";
 @NgModule({
   declarations: [
-    LoginComponent
+    ForgotComponent
   ],
   imports: [
     HttpClientModule,
@@ -17,11 +17,11 @@ import {AuthService} from "../../../core/auth.service";
     ReactiveFormsModule
   ],
   exports: [
-    LoginComponent
+    ForgotComponent
   ],
   providers: [
     AuthService
   ]
 })
-export class LoginModule {
+export class ForgotModule {
 }

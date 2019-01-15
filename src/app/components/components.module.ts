@@ -10,7 +10,7 @@ import { LinkModule } from './link/link.module';
 import { GalleryModule } from './gallery/gallery.module';
 import { AvatarModule } from './avatar/avatar.module';
 import { ProfessionModule } from './profession/profession.module';
-import {SignUpModule} from "./navbar/signup/signup.module";
+import { SignUpModule } from "./navbar/signup/signup.module";
 import { MovieModule } from './movie/movie.module';
 import { PosterModule } from './poster/poster.module';
 import { TrailerModule } from './trailer/trailer.module';
@@ -20,50 +20,53 @@ import {LoginModule} from "./navbar/login/login.module";
 import { ProfessionTypeEditorComponent } from './profession-type/profession-type-editor/profession-type-editor.component';
 import { ProfessionTypeSelectorComponent } from './profession-type/profession-type-selector/profession-type-selector.component';
 import { ProfessionTypeModule } from './profession-type/profession-type.module';
+import { ForgotModule } from "./navbar/forgot/forgot.module";
 
 
 
 @NgModule({
-    exports: [
-        StarModule,
-        MainModule,
-        NavbarModule,
-        CountryModule,
-        LinkModule,
-        GalleryModule,
-        AvatarModule,
-        ProfessionModule,
-        SignUpModule,
-        MovieModule,
-        PosterModule,
-        TrailerModule,
-        CrewModule,
-        CastModule,
-        LoginModule,
-        ProfessionTypeModule
+  exports: [
+    StarModule,
+    MainModule,
+    NavbarModule,
+    CountryModule,
+    LinkModule,
+    GalleryModule,
+    AvatarModule,
+    ProfessionModule,
+    SignUpModule,
+    MovieModule,
+    PosterModule,
+    TrailerModule,
+    CrewModule,
+    CastModule,
+    LoginModule,
+    ForgotModule,
+    ProfessionTypeModule
 
-    ],
-    imports: [
-        HttpClientModule,
-        CommonModule,
-        StarModule,
-        MainModule,
-        NavbarModule,
-        CountryModule,
-        LinkModule,
-        GalleryModule,
-        AvatarModule,
-        ProfessionModule,
-        SignUpModule,
-        MovieModule,
-        PosterModule,
-        TrailerModule,
-        CrewModule,
-        CastModule,
-        LoginModule,
-        ProfessionTypeModule
-    ],
-    declarations: []
+  ],
+  imports: [
+    HttpClientModule,
+    CommonModule,
+    StarModule,
+    MainModule,
+    NavbarModule,
+    CountryModule,
+    LinkModule,
+    GalleryModule,
+    AvatarModule,
+    ProfessionModule,
+    SignUpModule,
+    MovieModule,
+    PosterModule,
+    TrailerModule,
+    CrewModule,
+    CastModule,
+    LoginModule,
+    ForgotModule,
+    ProfessionTypeModule
+  ],
+  declarations: []
 })
 
 export class ComponentsModule {

@@ -1,11 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Movie } from './movie'
+import { Movie } from './movie';
+import { HttpService } from 'src/app/core/http.service';
+
 @Injectable()
 
 export class MovieService {
 
-  constructor(private httpClient: HttpClient, private Movie:Movie) {
+  constructor(private httpService: HttpService) {
   }
-
+  public get(id: number, callback: Function) {
+    this.httpService.get<Movie>('http://localhost:8080/movies/' + id).subscribe(
+        (success) => {
+            callback(success);
+        }
+    );
+}
+public getAll(callback: Function) {
+    this.httpService.get<Movie[]>('http://localhost:8080/movies').subscribe(
+        (success) => {
+            callback(success);
+        }
+    );
+}
 }

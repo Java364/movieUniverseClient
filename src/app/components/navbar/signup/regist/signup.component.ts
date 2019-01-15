@@ -29,19 +29,19 @@ export class SignupComponent implements OnInit {
   signupGeneral(userForm) {
     console.log('general sign in');
 
-    const firstName = userForm.value.firstName;
-    const lastName = userForm.value.lastName;
-    const email = userForm.value.email;
-    const password = userForm.value.password;
-    this.signupService.signup(firstName, lastName, email, password);
+      const firstName = userForm.value.firstName;
+      const lastName = userForm.value.lastName;
+
+      const email = userForm.value.email;
+      const password = userForm.value.password;
+      this.signupService.signup(firstName, lastName, email, password);
 
   }
   firstnameControl: FormControl = new FormControl('', [
-    Validators.maxLength(3)
+    Validators.maxLength(15)
   ]);
   lastnameControl: FormControl = new FormControl('', [
-
-    Validators.maxLength(3)
+    Validators.maxLength(15)
   ]);
   emailControl: FormControl = new FormControl('', [
     Validators.required,
@@ -50,9 +50,8 @@ export class SignupComponent implements OnInit {
   passwordControl: FormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(6),
-    Validators.maxLength(16),
+    Validators.maxLength(20),
   ]);
-
   createForm() {
     this.userForm = this.fb.group({
       firstName: this.firstnameControl,

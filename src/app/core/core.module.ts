@@ -1,7 +1,8 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {AuthService} from "./auth.service";
-import { HttpService } from './http.service';
+import {HttpService} from "./http.service";
+
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HttpService } from './http.service';
   ],
   providers: [
     AuthService,
-    HttpService
+    HttpService,
+
   ]
 })
 export class CoreModule { }

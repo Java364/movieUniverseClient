@@ -3,6 +3,7 @@ import {CommonModule} from "@angular/common";
 import {NavbarComponent} from "./navbar.component";
 import {NavbarService} from "./navbar.service";
 import {HttpClientModule} from "@angular/common/http";
+import {AuthService} from "../../core/auth.service";
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule
   ],
   providers: [
-    NavbarService
+    NavbarService,
+    AuthService
   ],
   exports: [
     NavbarComponent
