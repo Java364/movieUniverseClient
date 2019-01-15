@@ -39,4 +39,10 @@ export class LinkOfStarComponent implements OnInit {
       this.link = <Links>success;
     });
   }
+
+  linkDelete(id: number) {
+    this.linkService.deleteLinks(id, (success) => {
+      this.showAllStarsLinks(this.starId);
+    });
+  }
 }

@@ -24,4 +24,10 @@ export class ProfessionsOfStarComponent implements OnInit {
     });
   }
 
+  deleteProfessionForStar(id: number) {
+    this.professionService.deleteProfessionForStar(id, (success) => {
+      this.showAllStarsProfessions(this.professionsLink);
+    });
+  }
+
 }

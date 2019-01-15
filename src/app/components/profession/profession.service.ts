@@ -24,4 +24,12 @@ export class ProfessionService {
       }
     );
   }
+
+  public deleteProfessionForStar(id: number, callback: Function) {
+    this.httpService.delete('http://localhost:8080/starProfession/' + id).subscribe(
+        (success) => {
+            callback(success);
+        }
+    );
+}
 }

@@ -7,7 +7,7 @@
     <td>{{starId}}</td>
     <td><button (click)="linkGet(link.id)" type="button" class="btn btn-outline-primary" data-toggle="modal"
         data-target="#linksModal">Edit</button></td>
-    <!--  <td><button (click)="linkDelete(links.id)" type="button" class="btn btn-outline-danger">Delete</button></td>-->
+    <td><button (click)="linkDelete(link.id)" type="button" class="btn btn-outline-danger">Delete</button></td>
 
   </tr>
 </div>
@@ -32,7 +32,7 @@
           <div class="form-group row">
             <label class="col-sm-4 col-form-label" for="name">socialNetworkingSite:</label>
             <div class="col-sm-8">
-              <select class="form-control form-control-lg " [(ngModel)]="links.socialNetworkingSite" name="socialNetworkingSite">
+              <select class="form-control form-control-lg " [(ngModel)]="link.socialNetworkingSite" name="socialNetworkingSite">
                 <option value="FACEBOOK">FACEBOOK</option>
                 <option value="INSTAGRAM">INSTAGRAM</option>
                 <option value="TWITTER">TWITTER</option>
