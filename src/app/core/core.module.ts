@@ -2,6 +2,7 @@ import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {AuthService} from "./auth.service";
 import {HttpService} from "./http.service";
+import {MatSnackBarModule} from "@angular/material";
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import {HttpService} from "./http.service";
   providers: [
     AuthService,
     HttpService,
-
+    MatSnackBarModule
   ]
 })
 export class CoreModule { }
