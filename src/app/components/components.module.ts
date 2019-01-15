@@ -18,6 +18,7 @@ import { CrewModule } from './crew/crew.module';
 import { CastModule } from './cast/cast.module';
 import { LoginModule } from "./navbar/login/login.module";
 import { ForgotModule } from "./navbar/forgot/forgot.module";
+import { GenreModule } from './genre/genre.module';
 
 
 
@@ -38,7 +39,8 @@ import { ForgotModule } from "./navbar/forgot/forgot.module";
     CrewModule,
     CastModule,
     LoginModule,
-    ForgotModule
+    ForgotModule,
+    GenreModule
 
   ],
   imports: [
@@ -59,7 +61,8 @@ import { ForgotModule } from "./navbar/forgot/forgot.module";
     CrewModule,
     CastModule,
     LoginModule,
-    ForgotModule
+    ForgotModule,
+    GenreModule
   ],
   declarations: []
 })
