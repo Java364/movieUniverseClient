@@ -18,6 +18,8 @@ import { CrewModule } from './crew/crew.module';
 import { CastModule } from './cast/cast.module';
 import { LoginModule } from "./navbar/login/login.module";
 import { ForgotModule } from "./navbar/forgot/forgot.module";
+import { StarUserModule } from './starUser/star-user.module';
+import { Star } from './star/star';
 
 
 
@@ -38,7 +40,8 @@ import { ForgotModule } from "./navbar/forgot/forgot.module";
     CrewModule,
     CastModule,
     LoginModule,
-    ForgotModule
+    ForgotModule,
+    StarUserModule
 
   ],
   imports: [
@@ -59,7 +62,8 @@ import { ForgotModule } from "./navbar/forgot/forgot.module";
     CrewModule,
     CastModule,
     LoginModule,
-    ForgotModule
+    ForgotModule,
+    StarUserModule
   ],
   declarations: []
 })

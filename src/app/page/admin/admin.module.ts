@@ -6,10 +6,8 @@ import { CountryPageComponent } from './country/country-page/country-page.compon
 import { StarPageComponent } from './star/star-page/star-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsModule } from 'src/app/components/components.module';
-import { MoviePageComponent } from '../user/movie-page/movie-page.component';
 
 const appRoutes: Routes = [
-  {path: 'star', component: StarPageComponent},
   {path: 'country', component: CountryPageComponent},
   {path: 'admin/star', component: StarPageComponent}
   
