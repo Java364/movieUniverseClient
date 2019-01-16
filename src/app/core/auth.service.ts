@@ -7,10 +7,10 @@ import {MatSnackBar} from "@angular/material";
 @Injectable()
 export class AuthService {
 
-    constructor(private router: Router,
-      private http: HttpClient,
-                private snackBar: MatSnackBar) {
-    }
+  constructor(private router: Router,
+              private http: HttpClient,
+              private snackBar: MatSnackBar) {
+  }
 
   public getToken(): string {
     return localStorage.getItem('token');
@@ -36,20 +36,7 @@ export class AuthService {
     return this.http.get<String>('http://localhost:8080/auth/forgotPass/' + email);
 
   }
-  /*
-   public authorize(login: string, password: string, callback: Function) {
-   const headers = new HttpHeaders();
-   headers.append('Content-Type', 'application/json');
-   this.http.post('api/auth/signin', {
-   email: login,
-   password: password
-   }, { responseType: 'text' }).subscribe(
-   (success) => {
-   this.setToken(success);
-   callback.call(this);
-   }
-   );
-   }*/
+
   public login(email: string, password: string) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
