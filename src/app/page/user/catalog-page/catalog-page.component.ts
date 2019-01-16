@@ -10,18 +10,18 @@ import { MovieService } from 'src/app/components/movie/movie.service';
 export class CatalogPageComponent implements OnInit {
   public movie: Movie;
   public movies: Movie[] = [];
- 
-  constructor(private movieService : MovieService) {
-     this.movie = new Movie();
+
+  constructor(private movieService: MovieService) {
+    this.movie = new Movie();
   }
 
   ngOnInit() {
-   this.showAllMovies();
+    this.showAllMovies();
   }
-  
+
   showAllMovies = () => {
     this.movieService.getAll((success) => {
-        this.movies = <Movie[]>success;
+      this.movies = <Movie[]>success;
     });
-}
+  }
 }
