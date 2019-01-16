@@ -11,7 +11,7 @@ import { CountryModule } from '../country/country.module';
 import { AvatarModule } from '../avatar/avatar.module';
 import { ProfessionModule } from '../profession/profession.module';
 import { ProfessionTypeModule } from '../profession-type/profession-type.module';
-import { StarListComponent } from './star-list/star-list.component';
+import { StarListComponent } from './star-list-editor/star-list.component';
 
 @NgModule({
     declarations: [
