@@ -8,14 +8,14 @@ export class StarService {
   }
 
   public getAll(callback: Function) {
-    this.httpService.get<Star[]>('http://localhost:8080/stars/list').subscribe(
+    this.httpService.get<Star[]>('http://localhost:8080/stars').subscribe(
       (success) => {
         callback(success);
       }
     );
   }
   public createStar(star: Star, callback: Function) {
-    this.httpService.post('http://localhost:8080/stars/create', star).subscribe(
+    this.httpService.post('http://localhost:8080/stars', star).subscribe(
       (success) => {
         callback(success);
       }
@@ -29,7 +29,7 @@ export class StarService {
     );
   }
   public updateStar(id: number, star: Star, callback: Function) {
-    this.httpService.put('http://localhost:8080/stars/update/' + id, star).subscribe(
+    this.httpService.put('http://localhost:8080/stars/' + id, star).subscribe(
       (success) => {
         callback(success);
       }
