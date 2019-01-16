@@ -1,3 +1,6 @@
-<p>
-  star-page user works!
-</p>
+<div *ngIf="star !== undefined">
+  <h1>{{star.firstName}}&nbsp;&nbsp;{{star.lastName}}</h1>
+  <p>
+    {{star.biography}}
+  </p>
+</div>

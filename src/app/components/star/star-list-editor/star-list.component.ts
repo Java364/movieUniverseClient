@@ -3,7 +3,7 @@ import { StarService } from '../star.service';
 import { Star } from '../star';
 
 @Component({
-  selector: 'app-star-list',
+  selector: 'app-star-list-editor',
   templateUrl: './star-list.component.html',
   styleUrls: ['./star-list.component.css']
 })

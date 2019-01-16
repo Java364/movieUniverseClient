@@ -13,7 +13,7 @@ import { Movie } from '../movie/movie';
 export class PosterComponent implements OnInit {
   @Input() movie: Movie;
   public poster: Poster;
-  constructor(private route: ActivatedRoute, private posterService: PosterService) {this.poster=new Poster();}
+  constructor(private route: ActivatedRoute, private posterService: PosterService) { this.poster = new Poster(); }
 
   ngOnInit() {
     this.showPoster(this.movie.poster);
@@ -25,5 +25,5 @@ export class PosterComponent implements OnInit {
     });
   }
 
-  
+
 }

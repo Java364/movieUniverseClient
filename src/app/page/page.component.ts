@@ -12,6 +12,7 @@ export class PageComponent implements OnInit {
   constructor(private authService: AuthService,
     private router: Router) { }
 
+
   ngOnInit() {
   }
   hasToken(): boolean {

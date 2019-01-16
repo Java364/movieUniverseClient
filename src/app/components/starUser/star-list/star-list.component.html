@@ -1,0 +1,22 @@
+<mat-grid-list cols="4" rowHeight="1:2">
+    <mat-grid-tile *ngFor="let star of stars">
+      <div style="width:100%; padding: 20px;">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{star.firstName}}</mat-card-title>
+          <mat-card-subtitle>{{star.lastName}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{star.biography}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a routerLink="/star/{{star.id}}">Details</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    </mat-grid-tile>
+  </mat-grid-list>
