@@ -1,6 +1,5 @@
 
 import { MovieComponent } from 'src/app/components/movie/movie.component';
-import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './main/main-page/main-page.component';
@@ -15,6 +14,7 @@ import { StarPageComponent } from './star-page/star-page.component';
 import { StarListPageComponent } from './star-list/star-list-page.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { StarUserModule } from 'src/app/components/starUser/star-user.module';
+import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainPageComponent },
@@ -22,7 +22,10 @@ const appRoutes: Routes = [
   { path: 'movie/:id', component: MoviePageComponent },
   { path: 'signup', component: SignupPageComponent },
   { path: 'star/:id', component: StarPageComponent },
-  { path: 'star-list', component: StarListPageComponent }
+  { path: 'star-list', component: StarListPageComponent },
+  { path: 'catalog', component: CatalogPageComponent },
+  { path: 'movie/:id', component: MoviePageComponent }
+
 ];
 
 @NgModule({
@@ -45,6 +48,7 @@ const appRoutes: Routes = [
     StarPageComponent,
     StarListPageComponent,
     NavbarComponent,
+    MoviePageComponent,
     CatalogPageComponent,
     RouterModule
   ]
