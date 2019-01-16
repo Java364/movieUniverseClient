@@ -57,6 +57,19 @@ export class AuthService {
 
     );
   }
+  loginWithGoogle(token: string): void {
+    this.http.get<TokenModel>('http://localhost:8080/api/auth/oauth/google?access_token=' + token)
+      .subscribe(jwtToken => {
+      console.log('Social login with Google was successful');
+      localStorage.setItem('jwtToken', jwtToken.accessToken);
+      this.router.navigate(['/cabinet']);
+    }, onFail => {
+      console.log('Fail to social login with Google');
+    });
+  }
+
+
+
   public hasToken(): boolean {
     return this.getToken() != null;
   }
