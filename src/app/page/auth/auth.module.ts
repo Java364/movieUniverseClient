@@ -30,10 +30,6 @@ const appRoutes: Routes = [
     ComponentsModule,
   ],
   exports: [
-
-    NavbarComponent,
-    RouterModule,
-
   ]
 })
 export class AuthModule { }

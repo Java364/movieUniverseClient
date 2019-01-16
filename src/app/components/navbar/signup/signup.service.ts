@@ -12,28 +12,7 @@ export class SignupService {
                private httpClient: HttpClient) {
   }
 
-  // public registrate(user: User, callback: Function) {
-  //   this.httpClient.post('http://localhost:8080/auth/signup', user).subscribe(
-  //     (success) => {
-  //       callback(success);
-  //     }
-  //   );
-  // }
-  /*signup(firstName: string,lastName: string, email: string, password: string): void {
-
-    this.httpClient.post<any>(baseUrl + 'signup', {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-    }).subscribe();
-    alert("all ok");
-    this.router.navigate(['/login']);
-
-}*/
    signup(firstName: string,lastName: string, email: string, password: string) {
-
-
     this.httpClient.post(baseUrl + 'signup', {
       firstName: firstName,
       lastName: lastName,
@@ -41,7 +20,6 @@ export class SignupService {
       password: password,
     }, { responseType: 'text' }).subscribe(
       (success) => {
-        console.log("ddss")
 
         this.router.navigate(['/login']);
       }

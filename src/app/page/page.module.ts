@@ -7,7 +7,8 @@ import { NavbarModule } from '../components/navbar/navbar.module';
 import {AuthService} from "../core/auth.service";
 
 import { MovieModule } from '../components/movie/movie.module';
-import {AuthModule} from "./auth/user.module";
+import { AuthModule } from './auth/auth.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [PageComponent
@@ -17,16 +18,14 @@ import {AuthModule} from "./auth/user.module";
     AdminModule,
     UserModule,
     MovieModule,
-    NavbarModule,
-    AuthModule
-    
+    AuthModule,
+    ComponentsModule
   ],
   exports: [
     PageComponent
   ],
   providers: [
-    /*LoginService,*/
-    AuthService
+
   ]
 })
 export class PageModule { }

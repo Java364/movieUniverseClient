@@ -19,6 +19,8 @@ import { CastModule } from './cast/cast.module';
 import { LoginModule } from "./navbar/login/login.module";
 import { ForgotModule } from "./navbar/forgot/forgot.module";
 import { GenreModule } from './genre/genre.module';
+import { StarUserModule } from './starUser/star-user.module';
+import { Star } from './star/star';
 
 
 
@@ -40,7 +42,8 @@ import { GenreModule } from './genre/genre.module';
     CastModule,
     LoginModule,
     ForgotModule,
-    GenreModule
+    GenreModule,
+    StarUserModule
 
   ],
   imports: [
@@ -62,7 +65,8 @@ import { GenreModule } from './genre/genre.module';
     CastModule,
     LoginModule,
     ForgotModule,
-    GenreModule
+    GenreModule,
+    StarUserModule
   ],
   declarations: []
 })
