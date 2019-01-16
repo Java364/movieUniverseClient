@@ -38,7 +38,7 @@
 
           <div class="enter__form-error" >
             <mat-error *ngIf="emailControl.hasError('required')" >
-              <strong style="color: #a89ea9"> Email is required</strong>
+          <span style="color: red">*</span><strong style="color: #a89ea9"> Email is required</strong>
             </mat-error>
             <mat-error *ngIf="emailControl.hasError('email') ">
               <strong> Please enter a valid email address!</strong>
@@ -56,7 +56,7 @@
              <strong> Password must contain less than 20 characters</strong>
             </mat-error>
             <mat-error *ngIf="passwordControl.hasError('required')">
-              <strong style="color: #a89ea9">Password is required!</strong>
+              <span style="color: red">* </span> <strong style="color: #a89ea9">Password is required!</strong>
             </mat-error>
           </div>
           <label for="user__password" class="enter__form-label">
