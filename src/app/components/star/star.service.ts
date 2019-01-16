@@ -9,7 +9,7 @@ export class StarService {
   }
 
   public getAll(callback: Function) {
-    this.httpService.get<Star[]>('http://localhost:8080/stars/list').subscribe(
+    this.httpService.get<Star[]>('http://localhost:8080/stars').subscribe(
       (success) => {
         callback(success);
       }
