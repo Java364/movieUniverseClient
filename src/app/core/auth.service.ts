@@ -47,7 +47,7 @@ export class AuthService {
       (success) => {
         this.setToken(JSON.parse(success)['accessToken']);
         console.log(success);
-        this.router.navigate(['/main']);
+        this.router.navigate(['/']);
       }
       , (error) => {
         if (error instanceof HttpErrorResponse) {
@@ -62,6 +62,8 @@ export class AuthService {
   }
 
   public refreshToken(): Observable<string> {
+
     return this.http.post<string>('', this.getToken());
   }
+
 }

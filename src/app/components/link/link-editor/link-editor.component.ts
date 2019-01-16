@@ -25,7 +25,6 @@ export class LinkEditorComponent implements OnInit {
   }
 
   createLink = (urlLink: string) => {
-    
     this.linkService.createLink(urlLink, this.link, (success) => {
       this.link = <Links>success;
     });

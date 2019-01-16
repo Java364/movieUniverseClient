@@ -16,9 +16,9 @@ import { PosterModule } from './poster/poster.module';
 import { TrailerModule } from './trailer/trailer.module';
 import { CrewModule } from './crew/crew.module';
 import { CastModule } from './cast/cast.module';
-import {LoginModule} from "./navbar/login/login.module";
+import { LoginModule } from './navbar/login/login.module';
 import { ProfessionTypeModule } from './profession-type/profession-type.module';
-import { ForgotModule } from "./navbar/forgot/forgot.module";
+import { ForgotModule } from './navbar/forgot/forgot.module';
 import { GenreModule } from './genre/genre.module';
 import { StarUserModule } from './starUser/star-user.module';
 

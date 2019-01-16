@@ -12,6 +12,7 @@ export class PageComponent implements OnInit {
   constructor(private authService: AuthService,
     private router: Router) { }
 
+
   ngOnInit() {
   }
   hasToken(): boolean {
@@ -19,6 +20,6 @@ export class PageComponent implements OnInit {
   }
   logOut() {
     this.authService.removeToken();
-    this.router.navigate(['/main']);
+    this.router.navigate(['/']);
   }
 }
