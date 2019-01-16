@@ -26,7 +26,7 @@ const appRoutes: Routes = [
 
 @NgModule({
 
-  declarations: [MainPageComponent, MoviePageComponent, StarPageComponent, StarListPageComponent],
+  declarations: [MainPageComponent, MoviePageComponent, StarPageComponent, StarListPageComponent, CatalogPageComponent],
 
   imports: [
     RouterModule.forRoot(
@@ -43,6 +43,7 @@ const appRoutes: Routes = [
     StarPageComponent,
     StarListPageComponent,
     NavbarComponent,
+    CatalogPageComponent,
     RouterModule
   ]
 })
