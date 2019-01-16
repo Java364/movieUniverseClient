@@ -15,8 +15,6 @@ import { MovieComponent } from './movie.component';
         CountryModule
     ],
     providers: [MovieService],
-    exports:[MovieComponent]
-    
-
+    exports: [MovieComponent]
 })
 export class MovieModule { }
