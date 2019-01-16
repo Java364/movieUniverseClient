@@ -7,7 +7,7 @@
           <mat-card-title>{{star.firstName}}</mat-card-title>
           <mat-card-subtitle>{{star.lastName}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <app-avatar-view [avatarLink]="star.avatar"></app-avatar-view>
         <mat-card-content>
           <p>
             {{star.biography}}
