@@ -11,7 +11,7 @@
 
 
 <div class="block-body">
-  <div class="container">
+
     <div class="site__info-wrapper">
       <div id="particles" class="particles__wrap">
         <form #f="ngForm" class="enter__form">
@@ -29,18 +29,19 @@
             <input type="password" placeholder="Password" ngModel name="password" required id="user__password"
                    class="enter__form-input"><br>
           </label>
-          <button type="button" class="btn btn-outline-danger" (click)="loginGeneral(f)">Login</button>
+          <button type="submit" class="btn btn-outline-danger" (click)="loginGeneral(f)">Login</button>
           <!--      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="loginGeneral(f)">Login</button>-->
         </form>
 
 
       </div>
     </div>
-  </div>
 
 
 </div>
-
+<!--<div class="nav-item forgot-link">
+  <a class="nav-link"  routerLink="forgot" >Forgot password</a>
+</div>-->
 <!--<div class="user_forms-forgot">
   <h2 class="forms_title">Forgot Password</h2>
   <form class="forms_form" (ngSubmit)="onSubmit(f)" #f="ngForm">
