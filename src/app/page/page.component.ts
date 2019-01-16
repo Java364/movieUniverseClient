@@ -19,6 +19,6 @@ export class PageComponent implements OnInit {
   }
   logOut() {
     this.authService.removeToken();
-    this.router.navigate(['/']);
+    this.router.navigate(['/main']);
   }
 }
