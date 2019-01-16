@@ -1,0 +1,8 @@
+<div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect2">Profession selector</label>
+        <select multiple [(ngModel)]="selectedProfessions" class="form-control">
+            <option *ngFor="let profession of professionTypes" [value]="profession.id">{{profession.professionType}}</option>
+        </select>
+  </div>
+  </div>

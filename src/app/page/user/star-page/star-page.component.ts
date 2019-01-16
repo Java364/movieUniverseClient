@@ -13,7 +13,7 @@ export class StarPageComponent implements OnInit {
   constructor(private route: ActivatedRoute, private starService: StarService) { }
   star: Star;
   starId: number;
-  
+
   ngOnInit() {
     this.starId = + this.route.snapshot.paramMap.get('id');
     this.GetStar(this.starId);

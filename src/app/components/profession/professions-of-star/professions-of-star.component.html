@@ -1,0 +1,10 @@
+<div class="form-group col-md-7">
+  Professions:
+  <tr *ngFor="let profession of professions">
+    <th>{{profession.id}}</th>
+    <td>{{profession.starProfessionId}}</td>
+    <td>{{profession.starProfession}}</td>
+    <td>{{professionsLink}}</td>
+    <td><button (click)="deleteProfessionForStar(profession.id)" type="button" class="btn btn-outline-danger">Delete</button></td>
+  </tr>
+</div>

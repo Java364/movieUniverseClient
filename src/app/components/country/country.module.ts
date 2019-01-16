@@ -4,18 +4,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CountryService } from './country.service';
 import { FormsModule } from '@angular/forms';
+import { CountriesOfStarComponent } from './countries-of-star/countries-of-star.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
     declarations: [
-        CountrySelectorComponent
+        CountrySelectorComponent,
+        CountriesOfStarComponent
     ],
     imports: [
         HttpClientModule,
         CommonModule,
-        FormsModule
+        FormsModule,
+        CoreModule
     ],
     exports: [
-        CountrySelectorComponent
+        CountrySelectorComponent,
+        CountriesOfStarComponent
     ],
     providers: [
         CountryService

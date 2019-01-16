@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../core/auth.service";
-import {Router} from "@angular/router";
+import { AuthService } from '../core/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page',
@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 export class PageComponent implements OnInit {
 
   constructor(private authService: AuthService,
-              private router: Router) { }
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -19,6 +19,6 @@ export class PageComponent implements OnInit {
   }
   logOut() {
     this.authService.removeToken();
-    this.router.navigate(['/main']);
-
-}}
+    this.router.navigate(['/']);
+  }
+}
