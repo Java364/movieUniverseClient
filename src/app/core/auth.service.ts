@@ -1,15 +1,15 @@
-import {Injectable} from '@angular/core';
-import {HttpHeaders, HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {Router} from '@angular/router';
-import {MatSnackBar} from '@angular/material';
+import { Injectable } from '@angular/core';
+import { HttpHeaders, HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable()
 export class AuthService {
 
   constructor(private router: Router,
-              private http: HttpClient,
-              private snackBar: MatSnackBar) {
+    private http: HttpClient,
+    private snackBar: MatSnackBar) {
   }
 
   public getToken(): string {
@@ -43,7 +43,7 @@ export class AuthService {
     this.http.post(`http://localhost:8080/auth/login`, {
       email: email,
       password: password
-    }, {responseType: 'text'}).subscribe(
+    }, { responseType: 'text' }).subscribe(
       (success) => {
         this.setToken(JSON.parse(success)['accessToken']);
         console.log(success);
@@ -61,5 +61,7 @@ export class AuthService {
     return this.getToken() != null;
   }
 
-
+  public refreshToken(): Observable<string> {
+    return this.http.post<string>('', this.getToken());
+  }
 }
