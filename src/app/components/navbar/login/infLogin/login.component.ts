@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../../signup/user";
-import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
-import {SignupService} from "../../signup/signup.service";
-import {LoginService} from "../login.service";
-import {AuthService} from "../../../../core/auth.service";
+import {User} from '../../signup/user';
+import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
+import {SignupService} from '../../signup/signup.service';
+import {LoginService} from '../login.service';
+import {AuthService} from '../../../../core/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -29,10 +29,6 @@ export class LoginComponent implements OnInit {
     const email = userf.value.email;
     const password = userf.value.password;
     this.authService.login(email, password);
-
-
   }
-
-
 
 }

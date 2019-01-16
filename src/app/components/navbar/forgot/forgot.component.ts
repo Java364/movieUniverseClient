@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../../../core/auth.service";
-import {FormBuilder, NgForm} from "@angular/forms";
-import {User} from "../signup/user";
+import {AuthService} from '../../../core/auth.service';
+import {FormBuilder, NgForm} from '@angular/forms';
+import {User} from '../signup/user';
 
 @Component({
   selector: 'app-forgot',
@@ -15,7 +15,6 @@ export class ForgotComponent implements OnInit {
 
   constructor(
               private authService: AuthService,
-
               private fb: FormBuilder) {
     this.user = new User();
   }
