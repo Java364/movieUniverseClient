@@ -7,12 +7,30 @@
 .video-foreground,
 .video-background iframe {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
 }
 #vidtop-content {
     top: 0;
+}
+
+.movie-info{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    z-index: 1000; 
+}
+
+.video-foreground::after {
+    height: 100%; 
+    width: 100%;
+    content: "";
+    background: rgba(0, 0, 0, .4);
+    z-index: 500;
+    position: absolute;
 }
 @media (min-aspect-ratio: 16/9) {
     .video-foreground { height: 300%; top: -100%; }
@@ -20,3 +38,30 @@
 @media (max-aspect-ratio: 16/9) {
     .video-foreground { width: 300%; left: -100%; }
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .xpandable-block {
+    height: 55px;
+    overflow: hidden;
+    order: 0;
+  }
+  .xpand-button {
+    order: 1;
+  }
+  input[type="checkbox"] {
+   display: none;
+  }
+  input[type="checkbox"]:checked + .xpandable-block {
+    height: auto;
+  }
+  label {
+    order: 1;
+    text-decoration: underline;
+    font-size: 18px;
+    cursor: pointer;
+  }
