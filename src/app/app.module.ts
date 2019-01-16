@@ -5,9 +5,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 import { PageModule } from './page/page.module';
-import {
-   MatFormFieldModule
-} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
 
 
 @NgModule({

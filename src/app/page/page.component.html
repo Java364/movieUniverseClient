@@ -1,16 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#"><img src="https://i.pinimg.com/originals/0f/c2/58/0fc2582176008cf53a9c6c8aa46097fd.jpg"
-                                        width="30" height="30" class="d-inline-block align-top" alt=""> Movie Universe</a>
+      width="30" height="30" class="d-inline-block align-top" alt=""> Movie Universe</a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a routerLink="" class="nav-link" >Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Top20</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="catalog" class="nav-link" >Catalog</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="admin/star" class="nav-link" >Star</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -21,33 +27,16 @@
       <li class="nav-item" *ngIf="!hasToken()">
         <a routerLink="signup" class="nav-link">Sign up</a>
       </li>
-      <li class="nav-item"  *ngIf="!hasToken()">
+      <li class="nav-item" *ngIf="!hasToken()">
         <a class="nav-link" routerLink="login">Log in</a>
       </li>
-      <li class="nav-item"  *ngIf="hasToken()">
+      <li class="nav-item" *ngIf="hasToken()">
         <a class="nav-link" (click)="logOut()">Log out</a>
       </li>
 
     </ul>
   </div>
 </nav>
-
-
-<ul class="nav nav-tabs nav-fill mt-5">
-    <li class="nav-item">
-        <a routerLink="admin/star" class="nav-link">Star</a>
-    </li>
-    <li class="nav-item">
-        <a routerLink="main" class="nav-link">Main</a>
-    </li>
-    <li class="nav-item">
-        <a routerLink="country" class="nav-link">Country</a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="catalog" class="nav-link">Catalog</a>
-  </li>
-
-</ul>
-<div class="border border-top-0 rounded p-5">
-    <router-outlet></router-outlet>
+<div>
+  <router-outlet></router-outlet>
 </div>
