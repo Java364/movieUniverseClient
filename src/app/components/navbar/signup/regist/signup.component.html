@@ -1,45 +1,4 @@
-<!--<div class="NewUserForm">
-  <div class="title">Registration form</div>
-  <form [formGroup]="userForm" (ngSubmit)="signupGeneral(userForm)">
-    <div class="form-group">
-      <input matInput placeholder="Firstname" formControlName="firstName" required>
-      <mat-error *ngIf="firstnameControl.hasError('maxlength') ">
-        Name is too long!
-      </mat-error>
-      <div class="form-group">
-        <input matInput placeholder="Lastname" formControlName="lastName" required>
-        <mat-error *ngIf="lastnameControl.hasError('maxlength') ">
-          String is too long!
-        </mat-error>
-      </div>
-      <div class="form-group">
-        <input matInput placeholder="Enter your email" formControlName="email" required>
-        <mat-error *ngIf="emailControl.hasError('required')">
-          Email is <strong>required</strong>
-        </mat-error>
-        <mat-error *ngIf="emailControl.hasError('email') ">
-          Please enter a valid email address!
-        </mat-error>
-      </div>
-      <div class="form-group">
-        <input matInput placeholder="Password" formControlName="password" required>
-        <mat-error *ngIf="passwordControl.hasError('minlength') && !passwordControl.hasError('required')">
-          Password must contain more than 6 characters!
-        </mat-error>
-        <mat-error *ngIf="passwordControl.hasError('maxlength') && !passwordControl.hasError('required')">
-          Password must contain less than 16 characters
-        </mat-error>
-        <mat-error *ngIf="passwordControl.hasError('required')">
-          Password is <strong>required</strong>!
-        </mat-error>
-      </div>
-      <div class="form-group">
-        <button mat-button class="button">Sign up</button>
-      </div>
-    </div>
-  </form>
 
-</div>-->
 
 
 
@@ -50,6 +9,9 @@
       <div id="particles" class="particles__wrap">
         <form [formGroup]="userForm" (ngSubmit)="signupGeneral(userForm)" class="enter__form">
           <div class="enter__form-error">
+            <mat-error *ngIf="firstnameControl.hasError('required')" >
+              <strong style="color: #a89ea9"> FirstName</strong>
+            </mat-error>
             <mat-error *ngIf="firstnameControl.hasError('maxlength') ">
               Name is too long!
             </mat-error>
@@ -61,6 +23,9 @@
           </label>
 
           <div class="enter__form-error">
+            <mat-error *ngIf="lastnameControl.hasError('required')" >
+              <strong style="color: #a89ea9"> LastName</strong>
+            </mat-error>
             <mat-error *ngIf="lastnameControl.hasError('maxlength') ">
               String is too long!
             </mat-error>
@@ -73,7 +38,7 @@
 
           <div class="enter__form-error" >
             <mat-error *ngIf="emailControl.hasError('required')" >
-              <strong style="color: indigo"> Email is required</strong>
+          <span style="color: red">*</span><strong style="color: #a89ea9"> Email is required</strong>
             </mat-error>
             <mat-error *ngIf="emailControl.hasError('email') ">
               <strong> Please enter a valid email address!</strong>
@@ -91,7 +56,7 @@
              <strong> Password must contain less than 20 characters</strong>
             </mat-error>
             <mat-error *ngIf="passwordControl.hasError('required')">
-              <strong style="color: indigo">Password is required</strong>!
+              <span style="color: red">* </span> <strong style="color: #a89ea9">Password is required!</strong>
             </mat-error>
           </div>
           <label for="user__password" class="enter__form-label">
