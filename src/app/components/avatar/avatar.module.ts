@@ -4,11 +4,13 @@ import { AvatarEditorComponent } from './avatar-editor/avatar-editor.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AvatarService } from './avatar.service';
 import { AvatarOfStarComponent } from './avatar-of-star/avatar-of-star.component';
+import { AvatarViewComponent } from './avatar-view/avatar-view.component';
 
 @NgModule({
   declarations: [
     AvatarEditorComponent,
-    AvatarOfStarComponent
+    AvatarOfStarComponent,
+    AvatarViewComponent
   ],
   imports: [
     HttpClientModule,
@@ -16,7 +18,8 @@ import { AvatarOfStarComponent } from './avatar-of-star/avatar-of-star.component
   ],
   exports: [
     AvatarEditorComponent,
-    AvatarOfStarComponent
+    AvatarOfStarComponent,
+    AvatarViewComponent
   ],
   providers: [
     AvatarService

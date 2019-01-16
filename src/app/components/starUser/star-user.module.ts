@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
 import { StarListComponent } from './star-list/star-list.component';
 import { RouterModule } from '@angular/router';
+import { AvatarModule } from '../avatar/avatar.module';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
         LinkModule,
         GalleryModule,
         CoreModule,
-        RouterModule
+        RouterModule,
+        AvatarModule
     ],
     exports: [
         StarListComponent
