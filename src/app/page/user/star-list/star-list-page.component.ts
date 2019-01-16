@@ -15,21 +15,7 @@ export class StarListPageComponent implements OnInit {
   public stars: Star[] = [];
 
   ngOnInit() {
-    this.stars.push(
-      new Star()
-    );
-    this.stars.push(
-      new Star()
-    );
-    this.stars.push(
-      new Star()
-    );
-    this.stars.push(
-      new Star()
-    );
-    this.stars.push(
-      new Star()
-    );
+    
   }
 
 }

@@ -10,12 +10,13 @@ import { SignupPageComponent } from '../auth/signup-page/signup-page.component';
 import { StarPageComponent } from './star-page/star-page.component';
 import { StarListPageComponent } from './star-list/star-list-page.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { StarUserModule } from 'src/app/components/starUser/star-user.module';
 
 
 const appRoutes: Routes = [
   { path: 'main', component: MainPageComponent },
   { path: 'signup', component: SignupPageComponent },
-  { path: 'star', component: StarPageComponent },
+  { path: 'star/:id', component: StarPageComponent },
   { path: 'star-list', component: StarListPageComponent }
 ];
 
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     BrowserModule,
     CommonModule,
     ComponentsModule,
-    CoreModule
+    CoreModule,
+    StarUserModule
   ],
   exports: [
     MainPageComponent,

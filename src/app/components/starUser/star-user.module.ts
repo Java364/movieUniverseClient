@@ -5,10 +5,12 @@ import { LinkModule } from '../link/link.module';
 import { GalleryModule } from '../gallery/gallery.module';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
+import { StarListComponent } from './star-list/star-list.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
-    
+        StarListComponent
     ],
     imports: [
         CommonModule,
@@ -16,10 +18,10 @@ import { CoreModule } from 'src/app/core/core.module';
         LinkModule,
         GalleryModule,
         CoreModule,
-
+        RouterModule
     ],
     exports: [
-      
+        StarListComponent
     ],
     providers: [
         StarService
