@@ -5,10 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from 'src/app/core/core.module';
 import { LinksService } from './link.service';
 import { FormsModule } from '@angular/forms';
+import { LinkOfStarComponent } from './link-of-star/link-of-star.component';
 
 @NgModule({
   declarations: [
-    LinkEditorComponent
+    LinkEditorComponent,
+    LinkOfStarComponent
   ],
   imports: [
     HttpClientModule,
@@ -17,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   exports: [
-    LinkEditorComponent
+    LinkEditorComponent,
+    LinkOfStarComponent
   ],
   providers: [
     LinksService

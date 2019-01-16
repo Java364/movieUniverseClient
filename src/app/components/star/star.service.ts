@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Star } from './star';
 import { HttpService } from "../../core/http.service";
+import { Country } from '../country/country';
 
 @Injectable()
 export class StarService {
@@ -42,4 +43,12 @@ export class StarService {
       }
     );
   }
+
+  public addCountries(id:number, countries: Country[], callback: Function) {
+    this.httpService.post('http://localhost:8080/stars/' + id + '/countries', countries).subscribe(
+        (success) => {
+            callback(success);
+        }
+    );
+}
 }
