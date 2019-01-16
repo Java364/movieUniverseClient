@@ -13,20 +13,20 @@ export class LinkEditorComponent implements OnInit {
 
   public link: Links;
   public star: Star;
-  @Input() starMovieId: number;
+  @Input() urlLink: string;
 
   constructor(private linkService: LinksService, private starService: StarService) {
     this.link = new Links();
     this.star = new Star();
   }
 
-  createNewLink = (id: number) => {
+  createNewLink = (url: string) => {
     this.link = new Links();
   }
 
-  createLink = (id: number) => {
-
-    this.linkService.createLink(id, this.link, (success) => {
+  createLink = (urlLink: string) => {
+    
+    this.linkService.createLink(urlLink, this.link, (success) => {
       this.link = <Links>success;
     });
   }

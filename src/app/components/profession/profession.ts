@@ -1,7 +1,8 @@
 export class Profession {
     id: number;
     name: string;
-    imageUrl: string;
+    starProfessionId: number;
+    starProfession: string;
 
     constructor() { }
 }

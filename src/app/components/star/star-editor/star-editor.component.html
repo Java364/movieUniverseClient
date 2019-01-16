@@ -1,9 +1,4 @@
-<div *ngFor="let star of stars">
-  <label>{{star.id}}</label>.
-  <label>{{star.firstName}} </label>
-  <label>{{star.lastName}}</label>
-  <td> <button (click)="getStar(star.id)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
-</div>
+<td> <button (click)="getStar(starId)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button></td>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -44,9 +39,6 @@
           <label for="cityOfBirth">City of birth:</label>
           <input type="text" [(ngModel)]="star.cityOfBirth" name="cityOfBirth" class="form-control" />
         </div>
-
-          <app-link-editor starMovieId = {{star.id}}></app-link-editor>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -55,6 +47,3 @@
     </div>
   </div>
 </div>
-
-
-<app-gallery-editor></app-gallery-editor>

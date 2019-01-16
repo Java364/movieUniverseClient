@@ -10,16 +10,16 @@ import { LinkModule } from './link/link.module';
 import { GalleryModule } from './gallery/gallery.module';
 import { AvatarModule } from './avatar/avatar.module';
 import { ProfessionModule } from './profession/profession.module';
-import { SignUpModule } from "./navbar/signup/signup.module";
+import { SignUpModule } from './navbar/signup/signup.module';
 import { MovieModule } from './movie/movie.module';
 import { PosterModule } from './poster/poster.module';
 import { TrailerModule } from './trailer/trailer.module';
 import { CrewModule } from './crew/crew.module';
 import { CastModule } from './cast/cast.module';
-import { LoginModule } from "./navbar/login/login.module";
+import {LoginModule} from "./navbar/login/login.module";
+import { ProfessionTypeModule } from './profession-type/profession-type.module';
 import { ForgotModule } from "./navbar/forgot/forgot.module";
 import { StarUserModule } from './starUser/star-user.module';
-import { Star } from './star/star';
 
 
 
@@ -41,6 +41,7 @@ import { Star } from './star/star';
     CastModule,
     LoginModule,
     ForgotModule,
+    ProfessionTypeModule,
     StarUserModule
 
   ],
@@ -63,6 +64,7 @@ import { Star } from './star/star';
     CastModule,
     LoginModule,
     ForgotModule,
+    ProfessionTypeModule,
     StarUserModule
   ],
   declarations: []
