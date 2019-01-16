@@ -19,6 +19,7 @@ import { CastModule } from './cast/cast.module';
 import {LoginModule} from "./navbar/login/login.module";
 import { ProfessionTypeModule } from './profession-type/profession-type.module';
 import { ForgotModule } from "./navbar/forgot/forgot.module";
+import { GenreModule } from './genre/genre.module';
 import { StarUserModule } from './starUser/star-user.module';
 
 
@@ -41,6 +42,7 @@ import { StarUserModule } from './starUser/star-user.module';
     CastModule,
     LoginModule,
     ForgotModule,
+    GenreModule,
     ProfessionTypeModule,
     StarUserModule
 
@@ -64,6 +66,7 @@ import { StarUserModule } from './starUser/star-user.module';
     CastModule,
     LoginModule,
     ForgotModule,
+    GenreModule,
     ProfessionTypeModule,
     StarUserModule
   ],

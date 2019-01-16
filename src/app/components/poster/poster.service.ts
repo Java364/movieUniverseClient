@@ -11,7 +11,7 @@ import { Movie } from '../movie/movie';
 export class PosterService {
 
 
-  constructor(private httpService: HttpService, private movieService: MovieService) { }
+  constructor(private httpService: HttpService) { }
 
   public getPoster(url: string, callback: Function) {
     this.httpService.get<Poster>(url).subscribe(
