@@ -7,16 +7,18 @@ import { StarPageComponent } from './star/star-page/star-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsModule } from 'src/app/components/components.module';
 
+import { StarPageByIdComponent } from './star/star-page-by-id/star-page-by-id.component';
+
 const appRoutes: Routes = [
+  {path: 'admin/star', component: StarPageComponent},
   {path: 'country', component: CountryPageComponent},
-  {path: 'admin/star', component: StarPageComponent}
-  
+  {path: 'admin/star/:id', component: StarPageByIdComponent}
 ];
 
 
 
 @NgModule({
-  declarations: [CountryPageComponent, StarPageComponent],
+  declarations: [CountryPageComponent, StarPageComponent, StarPageByIdComponent],
   imports: [
     RouterModule.forRoot(
       appRoutes,
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
   exports: [
     CountryPageComponent,
     StarPageComponent,
-    RouterModule
+    RouterModule,
+    StarPageByIdComponent
   ]
 
 })

@@ -7,11 +7,17 @@ import { GalleryModule } from '../gallery/gallery.module';
 import { StarCreatorComponent } from './star-creator/star-creator.component';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
+import { CountryModule } from '../country/country.module';
+import { AvatarModule } from '../avatar/avatar.module';
+import { ProfessionModule } from '../profession/profession.module';
+import { ProfessionTypeModule } from '../profession-type/profession-type.module';
+import { StarListComponent } from './star-list/star-list.component';
 
 @NgModule({
     declarations: [
         StarEditorComponent,
-        StarCreatorComponent
+        StarCreatorComponent,
+        StarListComponent
     ],
     imports: [
         CommonModule,
@@ -19,11 +25,16 @@ import { CoreModule } from 'src/app/core/core.module';
         LinkModule,
         GalleryModule,
         CoreModule,
+        CountryModule,
+        AvatarModule,
+        ProfessionModule,
+        ProfessionTypeModule
 
     ],
     exports: [
         StarEditorComponent,
-        StarCreatorComponent
+        StarCreatorComponent,
+        StarListComponent
     ],
     providers: [
         StarService

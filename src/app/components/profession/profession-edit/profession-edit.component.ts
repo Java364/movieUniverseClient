@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Profession } from '../profession';
+import { ProfessionService } from '../profession.service';
 
 @Component({
   selector: 'app-profession-edit',
@@ -7,7 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfessionEditComponent implements OnInit {
 
-  constructor() { }
+  public starProfession: Profession;
+  @Input() professionCreateLink: string;
+
+  constructor(private professionService: ProfessionService) {
+    this.starProfession = new Profession();
+  }
+
+  createNewProfession = (link: string) => {
+    this.starProfession = new Profession();
+  }
+
+  createProfessionForStar = (link: string) => {
+
+    this.professionService.createProfessionForStar(link, this.starProfession, (success) => {
+      this.starProfession = <Profession>success;
+    });
+  }
 
   ngOnInit() {
   }
