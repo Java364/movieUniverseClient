@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 import { PageModule } from './page/page.module';
-import { MatFormFieldModule } from '@angular/material';
+import { MatFormFieldModule, MatSnackBarModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { MatFormFieldModule } from '@angular/material';
     BrowserModule,
     FormsModule,
     PageModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   providers: [
     /*{

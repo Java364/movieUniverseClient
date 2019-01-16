@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpHeaders, HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable()
 export class AuthService {
 
     constructor(private router: Router,
-        private http: HttpClient) {
+        private http: HttpClient,
+        private snackBar: MatSnackBar) {
     }
 
     public getToken(): string {
@@ -34,21 +36,7 @@ export class AuthService {
         return this.http.get<String>('http://localhost:8080/auth/forgotPass/' + email);
 
     }
-    /*
 
-        public authorize(login: string, password: string, callback: Function) {
-            const headers = new HttpHeaders();
-            headers.append('Content-Type', 'application/json');
-            this.http.post('api/auth/signin', {
-                email: login,
-                password: password
-            }, { responseType: 'text' }).subscribe(
-                (success) => {
-                    this.setToken(success);
-                    callback.call(this);
-                }
-            );
-        }*/
     public login(email: string, password: string) {
         const headers = new HttpHeaders();
         headers.append('Content-Type', 'application/json');
@@ -59,8 +47,14 @@ export class AuthService {
             (success) => {
                 this.setToken(JSON.parse(success)['accessToken']);
                 console.log(success);
-                this.router.navigate(['/main']);
+                this.router.navigate(['/']);
             }
+            , (error) => {
+                if (error instanceof HttpErrorResponse) {
+                    alert('Sorry, you can`t login! Try again or registrate');
+                }
+            }
+
         );
     }
     public hasToken(): boolean {
