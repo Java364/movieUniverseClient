@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {SignupService} from "../signup.service";
-import {User} from "../user";
-import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {SignupService} from '../signup.service';
+import {User} from '../user';
+import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -16,27 +16,22 @@ export class SignupComponent implements OnInit {
               private fb: FormBuilder) {
     this.user = new User();
   }
+
   ngOnInit(): void {
     this.createForm();
   }
-  // createPost() {
-  //   this.signupService.registrate(this.user, (success) => {
-  //     this.user = <User>success;
-  //
-  //   });
-  // }
+
 
   signupGeneral(userForm) {
-    console.log('general sign in');
 
-      const firstName = userForm.value.firstName;
-      const lastName = userForm.value.lastName;
-
-      const email = userForm.value.email;
-      const password = userForm.value.password;
-      this.signupService.signup(firstName, lastName, email, password);
+    const firstName = userForm.value.firstName;
+    const lastName = userForm.value.lastName;
+    const email = userForm.value.email;
+    const password = userForm.value.password;
+    this.signupService.signup(firstName, lastName, email, password);
 
   }
+
   firstnameControl: FormControl = new FormControl('', [
     Validators.maxLength(15)
   ]);
@@ -52,6 +47,7 @@ export class SignupComponent implements OnInit {
     Validators.minLength(6),
     Validators.maxLength(20),
   ]);
+
   createForm() {
     this.userForm = this.fb.group({
       firstName: this.firstnameControl,

@@ -6,6 +6,7 @@ import { CountryPageComponent } from './country/country-page/country-page.compon
 import { StarPageComponent } from './star/star-page/star-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsModule } from 'src/app/components/components.module';
+
 import { StarPageByIdComponent } from './star/star-page-by-id/star-page-by-id.component';
 
 const appRoutes: Routes = [

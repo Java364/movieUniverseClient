@@ -21,6 +21,8 @@ import { ProfessionTypeEditorComponent } from './profession-type/profession-type
 import { ProfessionTypeSelectorComponent } from './profession-type/profession-type-selector/profession-type-selector.component';
 import { ProfessionTypeModule } from './profession-type/profession-type.module';
 import { ForgotModule } from "./navbar/forgot/forgot.module";
+import { StarUserModule } from './starUser/star-user.module';
+import { Star } from './star/star';
 
 
 
@@ -42,7 +44,8 @@ import { ForgotModule } from "./navbar/forgot/forgot.module";
     CastModule,
     LoginModule,
     ForgotModule,
-    ProfessionTypeModule
+    ProfessionTypeModule,
+    StarUserModule
 
   ],
   imports: [
@@ -64,7 +67,8 @@ import { ForgotModule } from "./navbar/forgot/forgot.module";
     CastModule,
     LoginModule,
     ForgotModule,
-    ProfessionTypeModule
+    ProfessionTypeModule,
+    StarUserModule
   ],
   declarations: []
 })
