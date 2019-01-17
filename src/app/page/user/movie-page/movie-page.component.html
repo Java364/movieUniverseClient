@@ -1,10 +1,52 @@
-<p>
+<div class="movie-card" *ngIf="movie !== undefined">
+  
+  <div class="container">
+    
+    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg" width="200px" height="280px" alt="cover" class="cover" /></a>
+        
+    <div class="hero" style="background-image: url(https://fsmedia.imgix.net/25/ff/b7/88/caa6/407a/b04d/7b747f58fb6b/batman-dawn-of-justice.jpeg?rect=0%2C34%2C1280%2C640&auto=format%2Ccompress&w=1200">
+            
+      <div class="details">
+      
+        <div class="title1">{{movie.movieName}}<span>{{movie.ageLimitation}}+</span></div>
 
-  {{movie.year}}
-
-</p>
-
-
-<app-movie></app-movie>
-<app-poster *ngIf="movie" [movie]="movie"></app-poster>
-<app-genre *ngIf="movie" [movie]="movie"></app-genre>
+        <div class="title2">{{movie.year}}</div>    
+        
+        <span class="likes">109 likes</span>
+        
+      </div> <!-- end details -->
+      
+    </div> <!-- end hero -->
+    
+    <div class="description">
+        <div class="column1">
+        <app-genre *ngIf="movie" [movie]="movie"></app-genre> <!-- end column1 -->
+        </div>
+      <div class="column2">
+        
+        <p>{{movie.description}} </p>
+        
+        <div class="avatars">
+          <a href="#" data-tooltip="Person 1" data-placement="top">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar1.png" alt="avatar1" />
+          </a>
+          
+          <a href="#" data-tooltip="Person 2" data-placement="top">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar2.png" alt="avatar2" />
+          </a>
+          
+          
+          <a href="#" data-tooltip="Person 3" data-placement="top">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_avatar3.png" alt="avatar3" />
+          </a>
+          
+        </div> <!-- end avatars -->
+        
+        
+        
+      </div> <!-- end column2 -->
+    </div> <!-- end description -->
+    
+   
+  </div> <!-- end container -->
+</div> 
