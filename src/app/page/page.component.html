@@ -7,9 +7,6 @@
         <a routerLink="" class="nav-link" >Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Top20</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
@@ -18,7 +15,7 @@
       <li class="nav-item">
         <a routerLink="admin/star" class="nav-link" >Star</a>
       </li>
-      <li> 
+      <li>
         <a routerLink="star-list" class="nav-link">Stars</a>
       </li>
     </ul>
@@ -37,7 +34,6 @@
       <li class="nav-item" (click)="logOut()" *ngIf="hasToken()">
         <a  class="nav-link">Log out</a>
       </li>
-
     </ul>
   </div>
 </nav>

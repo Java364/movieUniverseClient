@@ -17,7 +17,7 @@ export class StarPageComponent implements OnInit {
 
   ngOnInit() {
     this.starId = + this.route.snapshot.paramMap.get('id');
-    this.starService.getStar(this.starId, (star:Star) => {
+    this.starService.getStar(this.starId, (star: Star) => {
       this.star = star;
     });
   }
