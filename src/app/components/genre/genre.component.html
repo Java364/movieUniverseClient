@@ -1,23 +1,5 @@
-<div class="container">
-  <div class="row p-3">
-    <h2 class="text-align-center col-md-10">Movie page!</h2>
-
-  </div>
-  <table class="table table-hover">
-    <tr>
-      <th>Name</th>
-      <th>Id</th>
-     
-
-      <th></th>
-      <th></th>
-    </tr>
-    <tbody>
-      <tr *ngFor="let genre of genres">
-        <td>{{genre.genreName}}</td>
-        <td>{{genre.id}}</td>
-      
-      </tr>
-    </tbody>
-  </table>
-</div>
+<div class="column1" *ngFor="let genre of genres">
+    
+    <span class="tag">{{genre.genreName}}</span>
+    
+ </div>
