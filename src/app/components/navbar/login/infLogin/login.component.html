@@ -1,14 +1,3 @@
-<!--<div class="wrapper">
-  <form #f="ngForm" class="form-login">
-    <h2 class="form-login-heading"></h2>
-    <input type="text" class="form-control" id="usernameOrEmail" ngModel name="email"
-            required="" autofocus=""/>
-    <input type="password" class="form-control" id="password" ngModel name="password"
-           required=""/>
-    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="loginGeneral(f)">Login</button>
-  </form>
-</div>-->
-
 
 <div class="block-body">
 
@@ -32,26 +21,11 @@
           <button type="submit" class="btn btn-outline-danger" (click)="loginGeneral(f)">Login</button>
           <!--      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="loginGeneral(f)">Login</button>-->
         </form>
-
+        <div class="nav-item forgot-link">
+          <a class="nav-link"  routerLink="forgot" >Forgot password</a>
+        </div>
 
       </div>
     </div>
-
 
 </div>
-<!--<div class="nav-item forgot-link">
-  <a class="nav-link"  routerLink="forgot" >Forgot password</a>
-</div>-->
-<!--<div class="user_forms-forgot">
-  <h2 class="forms_title">Forgot Password</h2>
-  <form class="forms_form" (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <fieldset class="forms_fieldset">
-      <div class="forms_field">
-        <input type="email" id="emailFor" placeholder="Email" class="form-control" ngModel name="email"/>
-      </div>
-    </fieldset>
-    <div class="forms_buttons">
-      <button type="submit" class="forms_buttons-action">Send reset link</button>
-    </div>
-  </form>
-</div>-->
