@@ -4,6 +4,8 @@ import { AuthService } from './auth.service';
 import { HttpService } from './http.service';
 import { MatSnackBarModule } from '@angular/material';
 import { MaterialModule } from './material.module';
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthInterceptor} from "./auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { MaterialModule } from './material.module';
   exports: [
     MaterialModule
   ],
+
   providers: [
     AuthService,
     HttpService,
-    MatSnackBarModule
+    MatSnackBarModule,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ]
 })
 export class CoreModule { }

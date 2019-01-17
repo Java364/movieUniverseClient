@@ -28,7 +28,7 @@ export class AuthInterceptor implements HttpInterceptor {
     }
 
     private getHandler(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        return next.handle(this.addToken(req, this.authService.getToken())).pipe(
+        return next.handle(this.addToken(req, 'Bearer ' + this.authService.getToken())).pipe(
             catchError(
                 (error: any) => {
                     if (error instanceof HttpErrorResponse) {

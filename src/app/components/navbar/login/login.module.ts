@@ -5,6 +5,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import {MatFormFieldModule} from '@angular/material';
 import {AuthService} from '../../../core/auth.service';
+import {RouterModule} from "@angular/router";
+
 @NgModule({
   declarations: [
     LoginComponent
@@ -14,7 +16,8 @@ import {AuthService} from '../../../core/auth.service';
     CommonModule,
     FormsModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     LoginComponent
