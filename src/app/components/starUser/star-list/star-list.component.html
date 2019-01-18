@@ -1,22 +1,33 @@
-<mat-grid-list cols="4" rowHeight="1:2">
-    <mat-grid-tile *ngFor="let star of stars">
-      <div style="width:100%; padding: 20px;">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{star.firstName}}</mat-card-title>
-          <mat-card-subtitle>{{star.lastName}}</mat-card-subtitle>
-        </mat-card-header>
-        <app-avatar-view [avatarLink]="star.avatar"></app-avatar-view>
-        <mat-card-content>
-          <p>
-            {{star.biography}}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a routerLink="/star/{{star.id}}">Details</a>
-        </mat-card-actions>
-      </mat-card>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section class="container">
+    <div class="row active-with-click">
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let star of stars">
+            <article class="material-card Blue-Grey">
+                <h2>
+                    <a routerLink="/star/{{star.id}}" style="color: white; text-decoration: none;">
+                        <span>{{star.firstName}}&nbsp;&nbsp;{{star.lastName}}</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            <app-profession-view [professionLink]="star.professions"></app-profession-view>
+                        </strong>
+                    </a>
+                </h2>
+                <div class="mc-content">
+                    <div class="img-container">
+                        <app-avatar-view [avatarLink]="star.avatar"></app-avatar-view>
+                    </div>
+                    <div class="mc-description">
+                        {{star.biography}}
+                    </div>
+                </div>
+                <a class="mc-btn-action" (click)="toggle($event);">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </article>
+        </div>
     </div>
-    </mat-grid-tile>
-  </mat-grid-list>
+</section>

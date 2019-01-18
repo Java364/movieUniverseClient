@@ -8,6 +8,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { StarListComponent } from './star-list/star-list.component';
 import { RouterModule } from '@angular/router';
 import { AvatarModule } from '../avatar/avatar.module';
+import { ProfessionModule } from '../profession/profession.module';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { AvatarModule } from '../avatar/avatar.module';
         GalleryModule,
         CoreModule,
         RouterModule,
-        AvatarModule
+        AvatarModule,
+        ProfessionModule
     ],
     exports: [
         StarListComponent

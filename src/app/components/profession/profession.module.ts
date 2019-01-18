@@ -5,11 +5,13 @@ import { ProfessionEditComponent } from './profession-edit/profession-edit.compo
 import { ProfessionsOfStarComponent } from './professions-of-star/professions-of-star.component';
 import { ProfessionService } from './profession.service';
 import { FormsModule } from '@angular/forms';
+import { ProfessionViewComponent } from './profession-view/profession-view.component';
 
 @NgModule({
   declarations: [
     ProfessionEditComponent,
-    ProfessionsOfStarComponent
+    ProfessionsOfStarComponent,
+    ProfessionViewComponent
   ],
   imports: [
     HttpClientModule,
@@ -18,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   ],
   exports: [
     ProfessionEditComponent,
-    ProfessionsOfStarComponent
+    ProfessionsOfStarComponent,
+    ProfessionViewComponent
   ],
   providers: [
     ProfessionService
